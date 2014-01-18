@@ -236,7 +236,7 @@
     <!-- main login page -->
     <string name="main_login_introduce">Challenge\nLife Achievement\nTogether</string>
     <string name="main_login_already_has_acc">Already has Account?</string>
-    <string name="main_login_here">Login here</string>
+    <string name="main_login_here"><u>Login here</u></string>
     <string name="main_login_sign_up">SIGN UP</string>
     
     <string name="net_accessable_no">NetWork not avaiable</string>

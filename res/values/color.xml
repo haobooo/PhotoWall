@@ -22,4 +22,7 @@
     <color name="gold">#b89766</color>
     <color name="grid_state_pressed">#bb7dbcd3</color>
     <color name="grid_state_focused">#777dbcd3</color>
+    
+    <color name="text_color_black">#333333</color>
+    <color name="text_color_link">#ee5458</color>
 </resources>
