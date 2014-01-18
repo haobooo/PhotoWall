@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:paddingBottom="5.0dip"
+	android:paddingTop="5.0dip" >
+
+	<ImageView
+		android:id="@id/album_dir_thumb"
+		android:layout_width="60.0dip"
+		android:layout_height="60.0dip"
+		android:layout_marginLeft="5.0dip"
+		android:layout_marginRight="5.0dip" />
+
+	<TextView
+		android:id="@id/album_dir_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@id/album_dir_thumb"
+		android:maxEms="10"
+		android:singleLine="true"
+		android:textColor="@android:color/white"
+		android:textSize="18.0dip" />
+
+	<TextView
+		android:id="@id/album_dir_path"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@id/album_dir_name"
+		android:layout_below="@id/album_dir_name"
+		android:lines="2"
+		android:paddingLeft="2.0dip"
+		android:paddingRight="20.0dip"
+		android:textColor="@android:color/white"
+		android:textSize="12.0dip" />
+
+	<TextView
+		android:id="@id/album_dir_item_num"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@id/album_dir_name"
+		android:layout_toRightOf="@id/album_dir_name"
+		android:paddingBottom="2.0dip"
+		android:singleLine="true"
+		android:textColor="@android:color/white"
+		android:textSize="13.0dip" />
+
+</RelativeLayout>

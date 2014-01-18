@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <include layout="@layout/action_bar_title"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/abs__ab_share_pack_holo_light"
+    >
+    <AutoCompleteTextView
+        android:id="@+id/search_auto_com_tv"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:hint="Search..."
+        android:textColor="#c0c0c0"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dip"
+        android:layout_gravity="center_vertical"
+        android:completionThreshold="1"
+        android:background="@color/white"
+        android:ems="10"
+    />
+    <ImageView
+        android:id="@+id/clear_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dip"
+    />
+    </LinearLayout>
+    <com.viewpagerindicator.TitlePageIndicator
+        android:id="@+id/search_indicator"
+        android:padding="10dip"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_viewpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:flipInterval="30" />
+    
+</LinearLayout>

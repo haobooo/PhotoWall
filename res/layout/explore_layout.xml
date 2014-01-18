@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#999999"
+    >
+    
+<include layout="@layout/action_bar_title"
+    android:id="@+id/header"
+    android:layout_alignParentTop="true"
+    />
+
+<RelativeLayout 
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/header"
+    >
+    <!-- buttons -->
+    <LinearLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:orientation="horizontal"
+        >
+        <ImageView 
+            android:id="@+id/btn_feature_archi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_feature"
+            android:scaleType="center"
+            />
+        <ImageView 
+            android:id="@+id/btn_archi_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_ranking"
+             android:scaleType="center"
+            />
+        <ImageView 
+            android:id="@+id/btn_hot_posts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_hotposts"
+             android:scaleType="center"
+            />
+    </LinearLayout>
+    
+    <LinearLayout 
+         android:id="@+id/hot_layout"
+         android:layout_width="match_parent"
+    	 android:layout_height="100dip" 
+    	 android:orientation="vertical"
+    	 android:layout_below="@+id/layout_buttons"
+    	android:background="#ffffff"
+    	android:layout_margin="5dip"
+        >
+        <TextView 
+        android:id="@+id/hottags"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:textSize="18sp"
+        android:text="HOT TAGS"
+        android:gravity="center"
+        />
+        <GridView 
+            android:id="@+id/hot_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:padding="5dip"
+             android:verticalSpacing="10dp" 
+        	android:horizontalSpacing="10dp"
+        	android:gravity="center"
+        	android:scrollbars="none"
+        	android:cacheColorHint="#00000000"
+            ></GridView>
+    </LinearLayout>
+    
+    <!-- quest list -->
+    
+    
+    <LinearLayout 
+         android:id="@+id/quest_layout"
+         android:layout_width="match_parent"
+    	 android:layout_height="match_parent" 
+    	 android:orientation="vertical"
+    	 android:layout_below="@+id/hot_layout"
+    	android:layout_marginTop="5dip"
+        >
+        <TextView 
+        android:id="@+id/quest"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:textSize="18sp"
+        android:text="QUESTS"
+        android:gravity="center"
+        />
+       <ListView 
+            android:id="@+id/questlist"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:cacheColorHint="#00000000"
+        	android:background="#999999"
+           ></ListView>
+    </LinearLayout>
+</RelativeLayout>
+
+</RelativeLayout>

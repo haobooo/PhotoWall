@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="images">
+        <item quantity="other">"%1$d
+张图片"</item>
+    </plurals>
+    <plurals name="sets">
+        <item quantity="other">"%1$d
+个图片组"</item>
+    </plurals>
+    <plurals name="friends">
+        <item quantity="other">"%1$d
+个好友"</item>
+    </plurals>
+    <plurals name="followers">
+        <item quantity="other">"%1$d
+个粉丝"</item>
+    </plurals>
+    <plurals name="type_at_least_n_characters">
+        <item quantity="other">请输入至少%1$d个字符。</item>
+    </plurals>
+</resources>

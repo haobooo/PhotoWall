@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="horizontal" >
+
+    <RelativeLayout 
+        android:id="@+id/top_layout"
+        android:layout_width="60dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+         android:background="#999999"
+        >
+	<com.lightbox.android.camera.RotateImageView
+            android:id="@+id/back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/menu_back"
+             android:clickable="true"
+            android:focusable="false"
+        />
+        
+    </RelativeLayout>
+    <com.lightbox.android.camera.PreviewFrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/control_bar" 
+        android:layout_toRightOf="@+id/top_layout"
+        >
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <SurfaceView
+                android:id="@+id/camera_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.lightbox.android.camera.FocusRectangle
+                android:id="@+id/focus_rectangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </com.lightbox.android.camera.PreviewFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/control_bar"
+        android:layout_width="100dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/grey_bar_vertical" >
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/button_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_camera_shoot_bg" >
+
+            <com.lightbox.android.camera.ShutterButton
+                android:id="@+id/shutter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="4dip"
+                android:background="@drawable/btn_camera_shoot"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="center" />
+        </FrameLayout>
+
+        <com.lightbox.android.camera.RotateImageView
+            android:id="@+id/review_thumbnail"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/border_last_picture"
+            android:clickable="true"
+            android:focusable="false" android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dip"
+            android:layout_marginRight="24dip"
+            android:background="@drawable/camera_functions_bg"
+            android:orientation="vertical" >
+
+            <com.lightbox.android.camera.RotateImageView
+                android:id="@+id/btn_flash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:clickable="true"
+                android:focusable="false"
+                android:src="@drawable/btn_camera_flashauto" />
+
+            <com.lightbox.android.camera.RotateImageView
+                android:id="@+id/btn_camera_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:clickable="true"
+                android:focusable="false"
+                android:src="@drawable/btn_camera_rear" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/confirm_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:background="#ffffff"
+        android:visibility="invisible"
+        >
+    <ImageView
+        android:id="@+id/imageViewPreview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:padding="1dp" 
+        />
+    <LinearLayout 
+        android:id="@+id/bottom_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" 
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        >
+        <com.lightbox.android.camera.RotateImageView 
+            android:id="@+id/btn_ok"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" 
+             android:minHeight="100dip"
+		     android:src="@drawable/btn_camear_ok"
+		     android:clickable="true"
+                android:focusable="false"
+            />
+         <com.lightbox.android.camera.RotateImageView 
+             android:id="@+id/btn_retry"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" 
+			android:src="@drawable/btn_camear_retry"
+			android:layout_marginTop="10dip"
+			android:minHeight="100dip"
+			android:clickable="true"
+                android:focusable="false"
+            />
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.photowall.photowallcommunity"
+	android:versionCode="1"
+	android:versionName="1.0" >
+
+	<uses-sdk
+		android:minSdkVersion="8"
+		/>
+
+	<!-- permission**************************** -->
+	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <!-- feature*************************************** -->
+    
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+	
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/ic_launcher"
+		android:label="@string/app_name" 
+		android:name="com.photowall.photowallcommunity.PhotoWallApplication"
+		>
+		<!--  
+		<activity
+			android:name="com.photowall.photowallcommunity.LogoActivity"
+			android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		-->
+		<!-- main login page -->
+        <activity android:name="com.photowall.ui.MainLoginActivity">
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			 
+        </activity>
+		
+		
+		<!-- <activity
+			android:name=".SharePage"
+			android:label="分享到微博" >
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+
+				<data android:mimeType="image/*" />
+			</intent-filter>
+		</activity> -->
+		<activity android:name="com.photowall.photowallcommunity.AchievementsInfoActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.UserInfoActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.HomePageActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.CreateActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.SignUpActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.LoginActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.SuccessActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.ProfileActivity" >
+		</activity>
+		<activity android:name="com.photowall.widget.ui.HSingleAblum_Main" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.UserListActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.PhotoWallSetting" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.PostInfoActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.HelpActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.NotificationsActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.FeedBackActivity" >
+		</activity>
+		<activity android:name="com.photowall.photowallcommunity.SearchActivity" >
+		</activity>
+		<activity
+			android:name="com.oauth.base.WebViewActivity"
+			android:screenOrientation="portrait" >
+		</activity>
+		<!-- posts -->
+		<activity android:name="com.photowall.ui.ArchievementPostsActivity"></activity>
+		<!-- camera -->
+		
+		<activity
+            android:name="com.lightbox.android.camera.activities.Camera"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:taskAffinity="lightbox.task.camera"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="photowall.media.action.IMAGE_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- Settings -->
+        <activity
+            android:name="com.lightbox.android.camera.activities.Settings"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- sign email -->
+        <activity android:name="com.photowall.ui.SignEmailActivity"></activity>
+        <activity android:name="com.photowall.ui.LoginEmailActivity"></activity>
+        <activity android:name="com.photowall.ui.ModifyUserActivity"></activity>
+        <activity android:name="com.photowall.ui.QuestPageActivity"></activity>
+        <activity android:name="oauth.facebookbak.FacebookActivity"></activity>
+        
+        <activity android:name="com.facebook.LoginActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:label="@string/app_name" />
+        <!-- homepage -->
+        <activity android:name="com.photowall.PhotoHomePageActivity"></activity>
+        <activity android:name="com.photowall.ui.PhotoProfileActivity"></activity>
+        <activity android:name="com.photowall.ui.ExploreActivity"></activity>
+        <activity android:name="com.photowall.ui.quests.QuestDetailsActivity"></activity>
+        <activity android:name="com.photowall.ui.earchievement.ArchievementDetailsActivity"></activity>
+        <activity android:name="com.photowall.ui.earchievement.ArchievementJinhuaFeature"></activity>
+        <activity android:name="com.photowall.ui.earchievement.ArchievementHotTag"></activity>
+        <activity android:name="com.photowall.ui.earchievement.ArchipaihangFramgmentActivity"></activity>
+        
+        <activity android:name="com.photowall.ui.post.PostAstoryActivity"></activity>
+        <activity android:name="com.photowall.ui.post.CheckinActivity"></activity>
+        
+        
+        <activity android:name="com.photowall.ui.explore.HotPostsFramgmentActivity"></activity>
+        
+        
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+	</application>
+ 
+</manifest>

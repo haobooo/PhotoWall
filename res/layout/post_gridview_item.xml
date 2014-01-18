@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="150dip"
+	android:orientation="vertical"
+	android:background="@drawable/achievement_card_bg_with_divider"
+	 >
+
+	<LinearLayout
+		android:id="@+id/ag_achievement_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="horizontal" 
+		>
+		<ImageView
+			android:id="@+id/ag_achievement_pic"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			/>
+		<TextView
+			android:id="@+id/ag_achievement_name"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="40dp"
+			android:paddingTop="10dp"
+			android:textColor="#000000"
+			android:text="Achievement name" />
+	</LinearLayout>
+<!-- image -->
+<LinearLayout 
+        android:layout_width="100dip"
+		android:layout_height="100dip"
+		android:orientation="horizontal" 
+		android:background="@drawable/common_bg_dialog"
+		android:gravity="center"
+		android:layout_gravity="center"
+    >
+	<ImageView
+		android:id="@+id/ag_image"
+		android:layout_width="90dip"
+		android:layout_height="90dip"
+		android:scaleType="fitXY"
+		android:layout_gravity="center"
+		android:src="@drawable/bg_guide_5" 
+		/>
+</LinearLayout>
+	<LinearLayout
+		android:id="@+id/ag_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="@drawable/achievement_card_bg_with_divider"
+		>
+		
+		<LinearLayout
+		android:id="@+id/ag_achieved_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		>
+		<ImageView
+		android:id="@+id/ag_achieved"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="5dip"
+		android:src="@drawable/stastic_icon_achieved_number" />
+		
+		<TextView
+			android:id="@+id/ag_achieved_text_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="5dip"
+			android:text="30" />
+		</LinearLayout>
+		
+
+		<LinearLayout
+		android:id="@+id/ag_challenging_layout"
+		android:layout_width="0dip"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center_horizontal"
+		android:orientation="horizontal"
+		>
+		<ImageView
+		android:id="@+id/ag_challenging"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="5dip"
+		android:src="@drawable/stastic_icon_challenged_number" />
+		<TextView
+			android:id="@+id/ag_challenging_text_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="5dip"
+			android:text="50" />
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

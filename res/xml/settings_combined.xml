@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="pref_category_account"
+        android:title="@string/account" >
+
+        <Preference
+            android:icon="@drawable/main_menu_13"
+            android:key="@string/pref_key_profile_picture"
+            android:title="@string/profile_picture" />
+
+        <EditTextPreference
+            android:defaultValue="七夕"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:key="@string/pref_key_name"
+            android:singleLine="true"
+            android:summary="七夕"
+            android:title="@string/name" />
+
+        <EditTextPreference
+            android:defaultValue="adssdfss"
+            android:imeOptions="actionDone"
+            android:key="@string/pref_key_username"
+            android:singleLine="true"
+            android:summary="adssdfss"
+            android:title="@string/username" />
+
+        <EditTextPreference
+            android:defaultValue="186546258954@163.com"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:key="@string/pref_key_email"
+            android:singleLine="true"
+            android:summary="186546258954@163.com"
+            android:title="@string/email" />
+
+        <EditTextPreference
+            android:defaultValue="我发现我是个艺术家"
+            android:imeOptions="actionDone"
+            android:inputType="textAutoCorrect|textShortMessage"
+            android:key="@string/pref_key_bio"
+            android:singleLine="true"
+            android:summary="我发现我是个艺术家"
+            android:title="@string/bio" />
+
+        <EditTextPreference
+            android:defaultValue="中国 北京"
+            android:imeOptions="actionDone"
+            android:inputType="textPostalAddress"
+            android:key="@string/pref_key_location"
+            android:singleLine="true"
+            android:summary="中国 北京"
+            android:title="@string/location" />
+
+        <EditTextPreference
+            android:defaultValue="---------"
+            android:imeOptions="actionDone"
+            android:inputType="textUri"
+            android:key="@string/pref_key_link"
+            android:singleLine="true"
+            android:summary="@string/have_a_blog"
+            android:title="@string/link" />
+<!-- 
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="true"
+            android:key="@string/pref_key_unsafe_content"
+            android:selectable="true"
+            android:summary="@string/show_unsafe_content_help"
+            android:title="@string/show_unsafe_content" 
+            
+            />
+             -->
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_category_social"
+        android:title="@string/social" >
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_facebook"
+            android:key="pref_screen_facebook"
+            android:persistent="false"
+            android:title="@string/facebook" >
+
+            <Preference
+                android:enabled="true"
+                android:key="@string/pref_key_facebook_link_account"
+                android:selectable="true"
+                android:title="@string/link_facebook_account" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="@string/pref_key_facebook_timeline"
+                android:summary="@string/facebook_add_to_timeline_help"
+                android:title="@string/facebook_add_to_timeline" />
+
+            <Preference
+                android:enabled="true"
+                android:key="@string/pref_key_facebook_follow_my_friends"
+                android:selectable="true"
+                android:title="@string/follow_my_friends" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_twitter"
+            android:key="pref_screen_twitter"
+            android:persistent="false"
+            android:title="@string/twitter" >
+
+            <Preference
+                android:enabled="true"
+                android:key="@string/pref_key_twitter_link_account"
+                android:selectable="true"
+                android:title="@string/link_twitter_account" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="@string/pref_key_twitter_timeline"
+                android:summary="@string/twitter_add_to_timeline_help"
+                android:title="@string/twitter_tweet_my_images" />
+
+            <Preference
+                android:enabled="true"
+                android:key="@string/pref_key_twitter_follow_my_friends"
+                android:selectable="true"
+                android:title="@string/follow_my_friends" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_category_privacy"
+        android:title="@string/privacy" >
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_private_account"
+            android:summary="@string/private_account_help"
+            android:title="@string/private_account" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_hide_from_search"
+            android:summary="@string/hide_from_search_help"
+            android:title="@string/hide_from_search" />
+
+        <PreferenceScreen
+            android:key="pref_screen_notifications"
+            android:persistent="false"
+            android:title="@string/notifications" >
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="@string/pref_key_weekly_newsletter"
+                android:summary="@string/weekly_newsletter_help"
+                android:title="@string/weekly_newsletter" />
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="@string/pref_key_new_followers"
+                android:summary="@string/new_followers_help"
+                android:title="@string/new_followers" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_category_about"
+        android:title="@string/about" >
+
+        <Preference
+            android:key="@string/pref_key_about_whi"
+            android:title="@string/about_whi" />
+
+        <Preference
+            android:key="@string/pref_key_version"
+            android:title="@string/version" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

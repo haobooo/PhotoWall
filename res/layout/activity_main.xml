@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+    
+	<RelativeLayout
+	    android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_bg" 
+        android:layout_alignParentTop="true"
+        >
+
+            <ImageView
+                android:id="@+id/iv_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/menu_top_left" />
+            <TextView
+            	android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_set"
+                android:layout_centerVertical="true"
+                android:text="Home"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" 
+                />
+            <RelativeLayout 
+            	android:id="@+id/classify_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/title_text"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                >
+                <Spinner  
+                    android:id="@+id/spinnered"  
+                    android:layout_width="wrap_content"  
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:visibility="invisible"
+                /> 
+                <TextView 
+                    android:id="@+id/id_tap_types"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:drawableBottom="@drawable/down_arrow"
+                    />
+                
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/iv_creat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_menu"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                android:src="@drawable/create_03" />
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/menu_top_right_btn" />
+        </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+         android:id="@+id/footer"
+         android:layout_below="@+id/header"
+         android:layout_alignParentBottom="true"
+        >
+    
+    <LinearLayout
+        android:id="@+id/layout_right"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="150dp"
+        android:orientation="vertical" >
+
+        <!-- <AbsoluteLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey21"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="设置"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp" />
+        </AbsoluteLayout> -->
+
+        <com.photowall.widget.SlidingMenuLayout
+            android:id="@+id/mylaout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <include layout="@layout/sliding_menu"/>
+            <ListView
+                android:id="@+id/lv_set"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" 
+                android:visibility="gone">
+            </ListView>
+        </com.photowall.widget.SlidingMenuLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_left"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+     <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <TextView 
+            android:id="@+id/tv_new"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+        <TextView 
+            android:id="@+id/tv_hot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hot"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+    </LinearLayout>
+     <com.viewpagerindicator.TitlePageIndicator
+        android:id="@+id/indicator"
+        android:padding="10dip"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:flipInterval="30" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_guide_5"
+            android:visibility="gone" />
+    </LinearLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/guide_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#a9000000"
+        android:visibility="gone"
+        >
+    <ImageView 
+        android:id="@+id/guide_hand"
+        	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_guide_hand"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dip"
+        />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/guide_click_home_item"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dip"
+            />
+    </RelativeLayout>
+</RelativeLayout>

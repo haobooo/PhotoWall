@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <item type="id" name="album_thumb">false</item>
+     <item type="id" name="album_grid">false</item>
+      <item type="id" name="album_dir_thumb">false</item>
+      <item type="id" name="album_dir_name">false</item>
+    <item type="id" name="album_dir_path">false</item>
+    <item type="id" name="album_dir_item_num">false</item>
+     <item type="id" name="album_list">false</item>
+     <item type="id" name="topbar">false</item>
+     <item type="id" name="btn_back">false</item>
+     <item type="id" name="btn_cancel">false</item>
+     <item type="id" name="album_title">false</item>
+         <item type="id" name="album_content">false</item>
+    <item type="id" name="album_selector">false</item>
+     <item type="id" name="img_key">false</item>
+</resources>

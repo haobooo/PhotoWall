@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:indicator="http://schemas.android.com/apk/res-auto"    
+    xmlns:app="http://schemas.android.com/apk/res/com.photowall.photowallcommunity">
+    
+    <include layout="@layout/action_bar_title"
+    android:id="@+id/header"
+    android:layout_alignParentTop="true"
+    />
+<com.emilsjolander.components.StickyScrollViewItems.StickyScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/ScrollView" 
+    android:layout_below="@+id/header"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:fadingEdge="none"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- header -->
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#999999"
+            >
+            <!-- pager -->
+            <RelativeLayout 
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip"
+                android:minHeight="200dip"
+                >
+                <android.support.v4.view.ViewPager
+		        android:id="@+id/help_pager"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_alignParentTop="true"
+		        android:layout_above="@+id/help_indicator"
+		        android:background="#ffffff"
+		        />
+		    	<com.viewpagerindicator.CirclePageIndicator
+		        android:id="@+id/help_indicator"
+		        android:layout_height="wrap_content"
+		        android:layout_width="fill_parent"
+		        android:layout_alignParentBottom="true"
+		        android:layout_centerHorizontal="true"
+		        android:padding="5dip"
+                indicator:radius="5dip"	
+                indicator:strokeWidth= "2dip"	  
+                indicator:pageColor="#ffffffff"
+                indicator:snap="true"
+                indicator:fillColor="#ffff0000"    
+                android:background="#00000000"  
+		        />
+            </RelativeLayout>
+            
+            <TextView 
+                android:id="@+id/info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:text="test tset test test test test test tes tes"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/pager"
+                android:layout_margin="10dip"
+                />
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info"
+                 android:background="#ffffff"
+                    android:paddingLeft="18dip"
+                    android:paddingRight="18dip"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                >
+                <TextView 
+                    android:id="@+id/title_req"
+                    android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:layout_alignParentLeft="true"
+                	android:text="REQUIREMENT"
+                	android:textColor="#ff0000"
+                	android:textSize="18sp"
+                	android:gravity="left"
+                    />
+                <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/title_req"
+                    >
+                    <TextView 
+                    android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:text="make 3 post(3/3)"
+                	android:textColor="#000000"
+                	android:drawableLeft="@drawable/icon_tick"
+                	android:drawablePadding="3dip"
+                    />
+                    <TextView 
+                    android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:text="make 1 photo post  between 5AM-6AM"
+                	android:textColor="#000000"
+                	android:drawableLeft="@drawable/icon_tick"
+                	android:drawablePadding="3dip"
+                    />
+                    <TextView 
+                    android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:text="make 1 photo post  between 0AM-1AM"
+                	android:textColor="#000000"
+                	android:drawableLeft="@drawable/icon_tick"
+                	android:drawablePadding="3dip"
+                    />
+                </LinearLayout>
+            </RelativeLayout>
+            
+            
+        </RelativeLayout>
+        <!-- sticky -->
+		<RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:tag="sticky"
+            android:background="@drawable/button_bar_background"
+            >
+            <ImageView 
+                android:id="@+id/btn_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_check_in"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+             <ImageView 
+                 android:id="@+id/btn_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_post"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/btn_checkin"
+                android:layout_toLeftOf="@+id/btn_challeng"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                />
+              <ImageView 
+                  android:id="@+id/btn_challeng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_add_to_challeng"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+        <com.photowall.widget.ui.ScrollGridView 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/postgrid"
+            android:numColumns="2"
+            android:verticalSpacing="10dip"
+            android:horizontalSpacing="10dip"
+            android:background="#ffffff"
+            />
+            
+    </LinearLayout>
+</com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
+
+<RelativeLayout 
+        android:id="@+id/guide_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#a9000000"
+        android:visibility="gone"
+        >
+    <ImageView 
+        android:id="@+id/guide_hand"
+        	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_guide_hand"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/btm_img"
+        />
+        <ImageView 
+            android:id="@+id/btm_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/guide_click_home_item"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dip"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

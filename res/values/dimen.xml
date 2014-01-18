@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     <dimen name="group_item_height">40.0dip</dimen>
+     <dimen name="fastscroll_overlay_size">104.0dip</dimen>
+    <dimen name="fastscroll_thumb_width">52.0dip</dimen>
+    <dimen name="fastscroll_thumb_height">64.0dip</dimen>
+    <dimen name="bottom_tabbar_top_dimen">2.0dip</dimen>
+    <dimen name="guid_dot_spacing">5.0dip</dimen>
+    <dimen name="image_thumbnail_size">72.0dip</dimen>
+    <dimen name="image_thumbnail_spacing">2.0dip</dimen>
+    <dimen name="text_size_puzzle_bottom_menu">14.0dip</dimen>
+    <dimen name="text_size_common">14.0dip</dimen>
+    <dimen name="puzzlefree_whiteframe_width">5.0dip</dimen>
+    <dimen name="ad_fillet_radius">15.0dip</dimen>
+    <dimen name="puzzle_item_border_width">5.0dip</dimen>
+</resources>

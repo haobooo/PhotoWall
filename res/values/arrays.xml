@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="photo_classify">
+        <item>All</item>
+        <item>iCool</item>
+        <item>iGenius</item>
+        <item>iUnique</item>
+        <item>iFunny</item>
+        <item>iLovely</item>
+        <item>iCreative</item>
+        <item>iNatural</item>
+        <item>iNice</item>
+        <item>iCrazy</item>
+        <item>iStupid</item>
+        <item>iLucky</item>
+        <item>iOtaku</item>
+    </string-array>
+    
+    <string-array name="photo_classify_name">
+        <item>iCool</item>
+        <item>iGenius</item>
+        <item>iUnique</item>
+        <item>iFunny</item>
+        <item>iLovely</item>
+        <item>iCreative</item>
+        <item>iNatural</item>
+        <item>iNice</item>
+        <item>iCrazy</item>
+        <item>iStupid</item>
+        <item>iLucky</item>
+        <item>iOtaku</item>
+    </string-array>
+    
+     <string-array name="photo_classify_id">
+        <item>23089315173217414</item>
+        <item>23089315173217415</item>
+        <item>23089315173217416</item>
+        <item>23089315173217417</item>
+        <item>23089315173217418</item>
+        <item>23089315173217419</item>
+        <item>23089315173217420</item>
+        <item>23089315173218014</item>
+        <item>23089315173218015</item>
+        <item>23089315173218016</item>
+        <item>23089315173218017</item>
+        <item>23089315173218018</item>
+    </string-array>
+    
+    <array name="photo_classify_drawable_all">
+    	<item>@null</item>
+        <item>@drawable/catagorie_icon_icool</item>
+        <item>@drawable/catagorie_icon_icrazy</item>
+        <item>@drawable/catagorie_icon_icreative</item>
+        <item>@drawable/catagorie_icon_ifunny</item>
+        <item>@drawable/catagorie_icon_ilovely</item>
+        <item>@drawable/catagorie_icon_ilucky</item>
+        <item>@drawable/catagorie_icon_iotaku</item>
+        <item>@drawable/catagorie_icon_iunique</item>
+        <item>@drawable/catagorie_icon_iunique</item>
+        <item>@drawable/catagorie_icon_iunique</item>
+        <item>@drawable/catagorie_icon_iunique</item>
+	    <item>@drawable/catagorie_icon_iunique</item>
+    </array>
+    
+   <array name="photo_classify_drawable">
+        <item>@drawable/catagorie_icon_icool</item>
+        <item>@drawable/catagorie_icon_icrazy</item>
+        <item>@drawable/catagorie_icon_icreative</item>
+        <item>@drawable/catagorie_icon_ifunny</item>
+        <item>@drawable/catagorie_icon_ilovely</item>
+        <item>@drawable/catagorie_icon_ilucky</item>
+        <item>@drawable/catagorie_icon_iotaku</item>
+        <item>@drawable/catagorie_icon_iunique</item>
+        <item>@drawable/catagorie_icon_iunique</item>
+        <item>@drawable/catagorie_icon_iunique</item>
+        <item>@drawable/catagorie_icon_iunique</item>
+	    <item>@drawable/catagorie_icon_iunique</item>
+    </array>
+    
+   <array name="photo_classify_drawable_mark">
+        <item>@drawable/achievement_card_top_icool</item>
+        <item>@drawable/achievement_card_top_icrazy</item>
+        <item>@drawable/achievement_card_top_icreative</item>
+        <item>@drawable/achievement_card_top_ifunny</item>
+        <item>@drawable/achievement_card_top_ilovely</item>
+        <item>@drawable/achievement_card_top_ilucky</item>
+        <item>@drawable/achievement_card_top_iotaku</item>
+        <item>@drawable/achievement_card_top_iunique</item>
+        <item>@drawable/achievement_card_top_iunique</item>
+        <item>@drawable/achievement_card_top_iunique</item>
+        <item>@drawable/achievement_card_top_iunique</item>
+	    <item>@drawable/achievement_card_top_iunique</item>
+    </array>
+     
+    <string-array name="title_string1">
+        <item>Hot</item>
+        <item>New</item>
+    </string-array>
+    <string-array name="title_string2">
+        <item>Achieved</item>
+        <item>Challenging</item>
+    </string-array>
+    <string-array name="title_string3">
+        <item>Post</item>
+        <item>Achievement</item>
+        <item>User</item>
+    </string-array>
+    
+    <!-- camera -->
+     <!-- Camera Preferences focus mode dialog box entries -->
+    <string-array name="pref_camera_focusmode_entries" translatable="false">
+        <item>@string/pref_camera_focusmode_entry_auto</item>
+        <item>@string/pref_camera_focusmode_entry_infinity</item>
+        <item>@string/pref_camera_focusmode_entry_macro</item>
+    </string-array>
+
+    <string-array name="pref_camera_focusmode_entryvalues" translatable="false">
+        <item>auto</item>
+        <item>infinity</item>
+        <item>macro</item>
+    </string-array>
+
+    <string-array name="pref_camera_flashmode_entryvalues" translatable="false">
+        <item>auto</item>
+        <item>on</item>
+        <item>off</item>
+    </string-array>
+
+    <!-- Camera Preferences White Balance dialog box entries -->
+    <string-array name="pref_camera_whitebalance_entries" translatable="false">
+        <item>@string/pref_camera_whitebalance_entry_auto</item>
+        <item>@string/pref_camera_whitebalance_entry_incandescent</item>
+        <item>@string/pref_camera_whitebalance_entry_daylight</item>
+        <item>@string/pref_camera_whitebalance_entry_fluorescent</item>
+        <item>@string/pref_camera_whitebalance_entry_cloudy</item>
+    </string-array>
+
+    <string-array name="pref_camera_whitebalance_entryvalues" translatable="false">
+        <item>auto</item>
+        <item>incandescent</item>
+        <item>daylight</item>
+        <item>fluorescent</item>
+        <item>cloudy-daylight</item>
+    </string-array>
+
+    <array name="pref_camera_whitebalance_icons">
+        <item>@drawable/ic_menuselect_wb_auto</item>
+        <item>@drawable/ic_menuselect_wb_incandescent</item>
+        <item>@drawable/ic_menuselect_wb_daylight</item>
+        <item>@drawable/ic_menuselect_wb_fluorescent</item>
+        <item>@drawable/ic_menuselect_wb_cloudy</item>
+    </array>
+
+    <array name="whitebalance_icons">
+        <item>@drawable/ic_viewfinder_wb_auto</item>
+        <item>@drawable/ic_viewfinder_wb_incandescent</item>
+        <item>@drawable/ic_viewfinder_wb_daylight</item>
+        <item>@drawable/ic_viewfinder_wb_fluorescent</item>
+        <item>@drawable/ic_viewfinder_wb_cloudy</item>
+    </array>
+
+    <!-- Camera Preferences Scene Mode dialog box entries -->
+    <string-array name="pref_camera_scenemode_entries" translatable="false">
+        <item>@string/pref_camera_scenemode_entry_auto</item>
+        <item>@string/pref_camera_scenemode_entry_action</item>
+        <item>@string/pref_camera_scenemode_entry_portrait</item>
+        <item>@string/pref_camera_scenemode_entry_landscape</item>
+        <item>@string/pref_camera_scenemode_entry_night</item>
+        <item>@string/pref_camera_scenemode_entry_night_portrait</item>
+        <item>@string/pref_camera_scenemode_entry_theatre</item>
+        <item>@string/pref_camera_scenemode_entry_beach</item>
+        <item>@string/pref_camera_scenemode_entry_snow</item>
+        <item>@string/pref_camera_scenemode_entry_sunset</item>
+        <item>@string/pref_camera_scenemode_entry_steadyphoto</item>
+        <item>@string/pref_camera_scenemode_entry_fireworks</item>
+        <item>@string/pref_camera_scenemode_entry_party</item>
+        <item>@string/pref_camera_scenemode_entry_candlelight</item>
+    </string-array>
+
+    <string-array name="pref_camera_scenemode_entryvalues" translatable="false">
+        <item>auto</item>
+        <item>action</item>
+        <item>portrait</item>
+        <item>landscape</item>
+        <item>night</item>
+        <item>night-portrait</item>
+        <item>theatre</item>
+        <item>beach</item>
+        <item>snow</item>
+        <item>sunset</item>
+        <item>steadyphoto</item>
+        <item>fireworks</item>
+        <item>party</item>
+        <item>candlelight</item>
+    </string-array>
+</resources>

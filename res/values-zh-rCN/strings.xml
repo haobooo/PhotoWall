@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_up_text">邮箱注册</string>
+	<string name="by_email_or_text">或按</string>
+	<string name="login_text">这里</string>
+	<string name="here_text">登陆</string>
+</resources>

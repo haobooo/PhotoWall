@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical" >
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_marginLeft="5dip"
+		android:layout_marginRight="5dip"
+		android:background="@drawable/btn_shape"
+		android:orientation="vertical" >
+
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="50dip" >
+
+			<ImageView
+				android:id="@+id/pi_user_image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="10dip"
+				android:background="@drawable/main_menu_13" />
+
+			<TextView
+				android:id="@+id/pi_user_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="10dip"
+				android:layout_toRightOf="@+id/pi_user_image"
+				android:text="UserName"
+				android:textColor="#000000" />
+
+			<TextView
+				android:id="@+id/pi_time_ago"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="10dip"
+				android:text="xxago"
+				android:textColor="#000000" />
+		</RelativeLayout>
+
+		<ImageView
+			android:id="@+id/pi_post_image"
+			android:layout_width="fill_parent"
+			android:layout_height="200dip"
+			android:scaleType="fitCenter"
+			android:src="@drawable/bg_guide_5" />
+
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="140dip"
+			android:background="@drawable/tile_texture_1" >
+
+			<LinearLayout
+				android:id="@+id/pi_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="80dip"
+				android:layout_alignParentTop="true"
+				android:orientation="horizontal"
+				android:paddingTop="15dip" >
+
+				<TextView
+					android:id="@+id/pi_comment_text"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:paddingTop="15dip"
+					android:text="Comment" />
+			</LinearLayout>
+
+			<RelativeLayout
+				android:id="@+id/pi_post_layout"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_above="@+id/pi_comment_layout" >
+
+				<ImageView
+					android:id="@+id/pi_like_mark"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_centerVertical="true"
+					android:padding="5dip"
+					android:src="@drawable/post_07" />
+
+				<TextView
+					android:id="@+id/pi_like_num"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_toRightOf="@+id/pi_like_mark"
+					android:paddingLeft="15dip"
+					android:text="100 likes" />
+
+				<TextView
+					android:id="@+id/pi_comment_num"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_toRightOf="@+id/pi_like_num"
+					android:paddingLeft="20dip"
+					android:text="80 comments" />
+
+				<ImageView
+					android:id="@+id/pi_share_image"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:src="@drawable/post_07" />
+			</RelativeLayout>
+
+			<LinearLayout
+				android:id="@+id/pi_comment_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:orientation="horizontal" >
+
+				<EditText
+					android:id="@+id/pi_comment"
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="4"
+					android:hint="input comment" />
+				<Button 
+				    android:id="@+id/pi_post_btn"
+				    android:layout_width="0dip"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:text="Post"
+				/>
+			</LinearLayout>
+		</RelativeLayout>
+	</LinearLayout>
+</LinearLayout>

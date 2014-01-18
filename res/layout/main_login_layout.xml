@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#999999"
+    >
+    <!-- image bg  -->
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    >
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+     	android:src="@drawable/lang_bg"
+     	android:layout_centerInParent="true"
+     	android:scaleType="centerCrop"
+        />
+</RelativeLayout>
+<!-- word layer  -->
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+    <RelativeLayout 
+        android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_alignParentTop="true"
+    android:layout_above="@+id/footer"
+    >
+    <ImageView 
+        android:id="@+id/main_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/main_logo"
+        android:layout_marginTop="10dip"
+        />
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/landing_slogan"
+        android:layout_marginTop="10dip"
+         android:layout_below="@+id/main_logo"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/main_logo"
+         android:text="@string/main_login_introduce"
+         android:layout_centerInParent="true"
+         android:textColor="#ffffff"
+         android:textSize="18sp"
+         android:textStyle="bold"
+         android:visibility="gone"
+        />
+    
+    </RelativeLayout>
+    <RelativeLayout 
+         android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:background="#a9ffffff"
+        android:paddingBottom="20dip"
+        android:paddingTop="20dip"
+        >
+    
+        <ImageView
+            android:id="@+id/sign_fb"
+            android:layout_alignParentTop="true" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sign_with_fb"
+            android:layout_centerHorizontal="true"
+            />
+        <ImageView
+            android:id="@+id/sign_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sign_with_email"
+            android:layout_below="@+id/sign_fb"
+            android:layout_centerHorizontal="true"
+            />
+        <LinearLayout 
+             android:layout_below="@+id/sign_email"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center_horizontal"
+             android:orientation="horizontal"
+            >
+        <TextView 
+            android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/main_login_already_has_acc"
+             android:textColor="#000000"
+            />
+         <TextView 
+             android:id="@+id/login_txt"
+            android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/main_login_here"
+             android:textColor="#ee5458"
+             android:drawableBottom="@drawable/line"
+            />
+         </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

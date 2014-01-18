@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/user_list_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_02" >
+
+            <ImageView
+                android:id="@+id/ul_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/nav_setting" />
+            <TextView
+            	android:id="@+id/ul_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="User List"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/ul_creat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ul_menu"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/create_03" />
+            <ImageView
+                android:id="@+id/ul_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/nav_setting" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/ul_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    />
+</LinearLayout>
