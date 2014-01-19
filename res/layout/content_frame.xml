@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/menu_bg" 
         android:layout_alignParentTop="true"
+        android:visibility="gone"
         >
 
             <ImageView

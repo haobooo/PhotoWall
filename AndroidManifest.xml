@@ -145,7 +145,8 @@
                   android:theme="@android:style/Theme.Translucent.NoTitleBar"
                   android:label="@string/app_name" />
         <!-- homepage -->
-        <activity android:name="com.photowall.PhotoHomePageActivity"></activity>
+        <activity android:name="com.photowall.PhotoHomePageActivity"
+            android:theme="@style/CustomTitleTheme"></activity>
         <activity android:name="com.photowall.ui.PhotoProfileActivity"></activity>
         <activity android:name="com.photowall.ui.ExploreActivity"></activity>
         <activity android:name="com.photowall.ui.quests.QuestDetailsActivity"></activity>

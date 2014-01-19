@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header"
+    android:layout_width="fill_parent"
+    android:layout_height="46dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+    
+    <ImageView
+        android:id="@+id/iv_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/menu_top_left_btn" />
+
+    <LinearLayout android:layout_width="0.5dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="8dp"
+        android:background="#ee5458"/>
+    
+    <com.photowall.widget.typeface.TypefaceTextView
+        android:id="@+id/title_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="HOME"
+        android:textColor="#ff0000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        geekui:customTypeface="fonts/TrajanPro-Bold.ttf" />
+
+    <ImageView
+        android:id="@+id/iv_creat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_top_quest_btn" />
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dip"
+        android:src="@drawable/menu_top_right_btn" />
+
+</LinearLayout>

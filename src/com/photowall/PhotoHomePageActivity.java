@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.MotionEvent;
 import android.view.View;
@@ -35,7 +36,7 @@ import com.photowall.ui.QuestPageActivity;
 import com.photowall.ui.earchievement.ArchievementDetailsActivity;
 import com.photowall.widget.utils.LoadingManager;
 
-public class PhotoHomePageActivity extends SlidingFragmentActivity 
+public class PhotoHomePageActivity extends FragmentActivity 
 implements View.OnClickListener
 {
 	private LoadingManager loadingManager;
@@ -59,6 +60,7 @@ implements View.OnClickListener
     
     private ViewGroup guide_layer;
     
+    private SlidingMenu slidingMenu;
     
     private final int MSG_DISMISS_ANIM = 0;
     private Handler mainHandler = new Handler(){
@@ -71,7 +73,9 @@ implements View.OnClickListener
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+        
         ScreenInfo.init(this);
         // set the Above View Fragment
         if (savedInstanceState != null)
@@ -85,36 +89,62 @@ implements View.OnClickListener
        // set the Above View
         setContentView(R.layout.content_frame);
         
+        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.home_title);
+        
+        
         getSupportFragmentManager()
         .beginTransaction()
         .replace(R.id.pager_container, mContent)
         .commit();
-       // set the menu view
-        setBehindContentView(R.layout.menu_frame);
-        if (savedInstanceState == null) {
-            FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
-            photoMenuFragment = new PhotoMenuFragment();
-            t.replace(R.id.menu_frame, photoMenuFragment);
-            t.commit();
-        } else {
-            photoMenuFragment = (PhotoMenuFragment)this.getSupportFragmentManager().findFragmentById(R.id.menu_frame);
-        }
-       // customize the SlidingMenu
-        SlidingMenu sm = getSlidingMenu();
-        sm.setShadowWidthRes(R.dimen.shadow_width);
-        sm.setShadowDrawable(R.drawable.shadow);
-        sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
-        sm.setFadeDegree(0.35f);
-        sm.setBehindWidth(ScreenInfo.getScreenw()/2);
-        sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-        sm.setBehindScrollScale(0.0f);
-     // customize the SlidingMenu
-        getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+//       // set the menu view
+//        setBehindContentView(R.layout.menu_frame);
+//        if (savedInstanceState == null) {
+//            FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
+//            photoMenuFragment = new PhotoMenuFragment();
+//            t.replace(R.id.menu_frame, photoMenuFragment);
+//            t.commit();
+//        } else {
+//            photoMenuFragment = (PhotoMenuFragment)this.getSupportFragmentManager().findFragmentById(R.id.menu_frame);
+//        }
+//       // customize the SlidingMenu
+//        SlidingMenu sm = getSlidingMenu();
+//        sm.setShadowWidthRes(R.dimen.shadow_width);
+//        sm.setShadowDrawable(R.drawable.shadow);
+//        sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+//        sm.setFadeDegree(0.35f);
+//        sm.setBehindWidth(ScreenInfo.getScreenw()/2);
+//        sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+//        sm.setBehindScrollScale(0.0f);
+//     // customize the SlidingMenu
+//        getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        
+        slidingMenu = new SlidingMenu(this);
+        slidingMenu.setMode(SlidingMenu.LEFT);
+        slidingMenu.setShadowWidthRes(R.dimen.shadow_width);
+        slidingMenu.setShadowDrawable(R.drawable.shadow);
+        slidingMenu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        slidingMenu.setFadeDegree(0.35f);
+        slidingMenu.setBehindWidth(ScreenInfo.getScreenw()/2);
+        slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        slidingMenu.setBehindScrollScale(0.0f);
+        
+        slidingMenu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        slidingMenu.setMenu(R.layout.menu_frame);
+        
+        photoMenuFragment = new PhotoMenuFragment();
+        getSupportFragmentManager().beginTransaction()
+        	.replace(R.id.menu_frame, photoMenuFragment)
+        	.commit();
+        
         initViews();
         
         loadingManager = LoadingManager.getInstance(this);
         loadingManager.showLoading();
     	mainHandler.sendEmptyMessageDelayed(MSG_DISMISS_ANIM, 1000);
+    }
+    
+    public SlidingMenu getSlidingMenu() {
+    	return slidingMenu;
     }
     
     @Override
