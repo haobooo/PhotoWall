@@ -103,11 +103,6 @@ public class HomePageActivity extends BaseSampleActivity implements OnTouchListe
     private String title[] = { "Search","Help","Report an issue","Setting" };
 
     private SlidingMenuLayout mylaout;
-    private RelativeLayout mNtificationsImage = null;
-    private ImageView mUserNameImage = null;
-    private ImageView mHomeImage = null;
-    private ImageView mAchievementsImage = null;
-    private ImageView mFeedBackImage = null;
     private ViewPager mHomeViewPager;
     private TextView mNewTextView;
     private TextView mHotTextView;
@@ -201,11 +196,6 @@ public class HomePageActivity extends BaseSampleActivity implements OnTouchListe
         iv_set = (ImageView) findViewById(R.id.iv_set);
         lv_set = (ListView) findViewById(R.id.lv_set);
         mylaout = (SlidingMenuLayout) findViewById(R.id.mylaout);
-        mNtificationsImage = (RelativeLayout) findViewById(R.id.notifications_image);
-        mUserNameImage = (ImageView) findViewById(R.id.user_name_image);
-        mHomeImage = (ImageView) findViewById(R.id.home_image);
-        mAchievementsImage = (ImageView) findViewById(R.id.achievements_image);
-        mFeedBackImage = (ImageView) findViewById(R.id.feed_back_image);
         mHomeViewPager = (ViewPager)findViewById(R.id.vp_main);
         mNewTextView = (TextView) findViewById(R.id.tv_new);
         mNewTextView.setOnClickListener(this);
@@ -218,7 +208,7 @@ public class HomePageActivity extends BaseSampleActivity implements OnTouchListe
         mUserNameLinearLayout.setOnClickListener(this);
         mHomeLinearLayout = (LinearLayout) findViewById(R.id.layout_home);
         mHomeLinearLayout.setOnClickListener(this);
-        mAchievementsLinearLayout = (LinearLayout)findViewById(R.id.layout_achievements);
+        mAchievementsLinearLayout = (LinearLayout)findViewById(R.id.layout_home);
         mAchievementsLinearLayout.setOnClickListener(this);
         mFeedBackLinearLayout = (LinearLayout)findViewById(R.id.layout_feed_back);
         mFeedBackLinearLayout.setOnClickListener(this);
@@ -729,12 +719,12 @@ public class HomePageActivity extends BaseSampleActivity implements OnTouchListe
             homeIntent.setClass(HomePageActivity.this, HomePageActivity.class);
             startActivity(homeIntent);
             break;
-        case R.id.layout_achievements:
-            Intent achmIntent = new Intent();
-            achmIntent.putExtra("achievements", "achievements");
-            achmIntent.setClass(HomePageActivity.this, HomePageActivity.class);
-            startActivity(achmIntent);
-            break;
+//        case R.id.layout_achievements:
+//            Intent achmIntent = new Intent();
+//            achmIntent.putExtra("achievements", "achievements");
+//            achmIntent.setClass(HomePageActivity.this, HomePageActivity.class);
+//            startActivity(achmIntent);
+//            break;
         case R.id.layout_feed_back:
             Intent feedbackIntent = new Intent();
             feedbackIntent.setClass(HomePageActivity.this, FeedBackActivity.class);

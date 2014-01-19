@@ -35,11 +35,11 @@ implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sliding_menu, container,false);
-        archievement_menu = (ViewGroup) view.findViewById(R.id.archievement_menu);
+        archievement_menu = (ViewGroup) view.findViewById(R.id.layout_home);
         layout_notifications = (ViewGroup) view.findViewById(R.id.layout_notifications);
         layout_user_name = (ViewGroup) view.findViewById(R.id.layout_user_name);
         layout_feed_back = (ViewGroup) view.findViewById(R.id.layout_feed_back);
-        explore_menu = (ViewGroup) view.findViewById(R.id.explore_menu);
+        explore_menu = (ViewGroup) view.findViewById(R.id.layout_explore);
         
         archievement_menu.setOnClickListener(this);
         layout_notifications.setOnClickListener(this);
@@ -57,7 +57,7 @@ implements View.OnClickListener
         
         switch (v.getId()) {
         
-            case R.id.archievement_menu:
+            case R.id.layout_home:
             {
             	Fragment newContent = null;
                 newContent = new ViewPagerFragment();
@@ -91,7 +91,7 @@ implements View.OnClickListener
                 startActivity(feedbackIntent);
             	break;
             }
-            case R.id.explore_menu:
+            case R.id.layout_explore:
             {
             	Intent feedbackIntent = new Intent();
                 feedbackIntent.setClass(getActivity(), ExploreActivity.class);

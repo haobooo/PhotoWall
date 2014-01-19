@@ -1,255 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:background="@drawable/btn_menu_bg" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/btn_menu_bg"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/layout_notifications"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:paddingLeft="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="3dp"
+            android:background="@drawable/menu_notification"
+            android:text="12"
+            android:textColor="#ee5457"
+            android:textSize="18sp"
+            android:gravity="center" />
 
-	<LinearLayout
-		android:id="@+id/layout_notifications"
-		android:layout_width="fill_parent"
-		android:layout_height="40dip"
-		android:layout_alignParentTop="true"
-		android:gravity="center_vertical"
-		android:orientation="vertical" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="NOTIFICATIONS"
+            android:textColor="#ee5458"
+            android:textSize="18sp" />
 
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_vertical"
-			android:orientation="horizontal" 
-			android:paddingLeft="20dip"
-			android:paddingTop="5dip"
-			android:paddingBottom="5dip"
-			>
+    </LinearLayout>
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/menu_list_cut_off_rule" />
 
-			<RelativeLayout
-				android:id="@+id/notifications_image"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/layout_user_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:orientation="vertical"
+        android:background="@drawable/menu_username_bg" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="LEGEND.OF"
+            android:textColor="#fefefe"
+            android:textSize="16sp" />
+		
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+            
+            <ImageView
+                android:id="@+id/user_name_image"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:src="@drawable/dummy_sidemenu_profile_photo" />
+            
+            <TextView
+                android:id="@+id/user_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:text="username"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
-				<ImageView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:src="@drawable/menu_notification" />
-
-				<TextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_centerInParent="true"
-					android:text="3" />
-			</RelativeLayout>
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Notifications"
-				android:textSize="20sp" 
-				android:layout_marginLeft="10dip"
-				android:textColor="#ff0000"
-				/>
-		</LinearLayout>
-
-		<View
-			android:layout_width="fill_parent"
-			android:layout_height="1dip"
-			android:background="@drawable/menu_list_cut_off_rule" />
-	</LinearLayout>
-
-	<RelativeLayout
-		android:id="@+id/layout_user_name"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center_vertical"
-		android:layout_below="@+id/layout_notifications" 
-		>
-
-		<LinearLayout
-			android:id="@+id/user_name"
-			android:layout_width="wrap_content"
-			android:layout_height="80dip"
-			android:gravity="center_vertical"
-			android:layout_alignParentTop="true"
-			android:orientation="vertical" 
-			android:paddingLeft="10dip"
-			>
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Legend.of"
-				android:textColor="#ffffff"
-				 />
-
-			<ImageView
-				android:id="@+id/user_name_image"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/default_avatar" />
-		</LinearLayout>
-
-		<TextView
-			android:id="@+id/user_name_text"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_centerVertical="true"
-			android:layout_toRightOf="@+id/user_name"
-			android:text="Username"
-			android:textColor="@android:color/white"
-			android:textSize="20sp"
-			android:layout_marginLeft="5dip"
-			 />
-
-		<View
-			android:layout_width="fill_parent"
-			android:layout_height="1dip"
-			android:layout_below="@+id/user_name"
-			android:background="@drawable/menu_list_cut_off_rule" />
-	</RelativeLayout>
-
-	<LinearLayout
-		android:id="@+id/layout_home"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center_vertical"
-		android:layout_below="@+id/layout_user_name"
-		android:visibility="gone"
-		android:orientation="vertical" >
-
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="50dip"
-			android:gravity="center_vertical"
-			android:orientation="horizontal" >
-
-			<ImageView
-				android:id="@+id/home_image"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/main_menu_13" />
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Home"
-				android:textColor="@android:color/white"
-				android:textSize="20sp" />
-		</LinearLayout>
-
-		<View
-			android:layout_width="fill_parent"
-			android:layout_height="1dip"
-			android:background="@drawable/menu_list_cut_off_rule" />
-	</LinearLayout>
-
-	<LinearLayout
-		android:id="@+id/layout_achievements"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center_vertical"
-		android:layout_below="@+id/layout_home"
-		android:orientation="vertical" >
-
-		<RelativeLayout
-		    android:id="@+id/archievement_menu"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_vertical"
-			android:orientation="horizontal" >
-
-			<ImageView
-				android:id="@+id/achievements_image"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/menu_icon_acievement_btn" 
-				android:layout_alignParentLeft="true"
-				/>
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="HOME"
-				android:textColor="@android:color/white"
-				android:textSize="15sp" 
-				android:layout_centerInParent="true"
-				/>
-		</RelativeLayout>
-
-		<View
-			android:layout_width="wrap_content"
-			android:layout_height="1dip"
-			android:background="@drawable/menu_list_cut_off_rule"/>
-	</LinearLayout>
-
-	<!-- explore -->
-	<LinearLayout
-		android:id="@+id/layout_explore"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center_vertical"
-		android:layout_below="@+id/layout_achievements"
-		android:orientation="vertical" >
-
-		<RelativeLayout
-		    android:id="@+id/explore_menu"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_vertical"
-			android:orientation="horizontal" >
-
-			<ImageView
-				android:id="@+id/explore_image"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/menu_icon_explore_btn" 
-				android:layout_alignParentLeft="true"
-				/>
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="EXPLORE"
-				android:textColor="@android:color/white"
-				android:textSize="15sp" 
-				android:layout_centerInParent="true"
-				/>
-		</RelativeLayout>
-
-		<View
-			android:layout_width="wrap_content"
-			android:layout_height="1dip"
-			android:background="@drawable/menu_list_cut_off_rule"/>
-	</LinearLayout>
+        </LinearLayout>
+        
+        
+    </LinearLayout>
 	
-	<View
-		android:layout_width="fill_parent"
-		android:layout_height="1dip"
-		android:layout_above="@+id/layout_feed_back"
-		android:background="@drawable/menu_list_cut_off_rule" />
+    <LinearLayout
+        android:id="@+id/layout_home"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_home_bg"
+        android:paddingLeft="12dp" >
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="HOME"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp" />
+        
+    </LinearLayout>
 
-	<RelativeLayout
-		android:id="@+id/layout_feed_back"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center_vertical"
-		android:layout_alignParentBottom="true"
-		android:orientation="horizontal" >
+    <LinearLayout
+        android:id="@+id/layout_explore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_explorer_bg"
+        android:paddingLeft="12dp" >
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="EXPLORE"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp" />
+        
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/menu_list_cut_off_rule" />
+    
+    <LinearLayout
+        android:id="@+id/layout_feed_back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_feedback_bg"
+        android:paddingLeft="12dp" >
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FEEDBACK"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp" />
+        
+    </LinearLayout>
+</LinearLayout>
 
-		<ImageView
-			android:id="@+id/feed_back_image"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:src="@drawable/menu_icon_feed_back_btn" 
-			android:layout_alignParentLeft="true"
-			/>
-
-		<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="FEEDBACK"
-			android:textColor="@android:color/white"
-			android:textSize="15sp"
-			android:layout_centerInParent="true"
-			 />
-	</RelativeLayout>
-
-</RelativeLayout>
