@@ -101,7 +101,10 @@ implements View.OnClickListener
 		}
 		case R.id.sign_fb:
 		{
-			onClickLogin();
+			//onClickLogin();
+			Intent intent = new Intent(MainLoginActivity.this,ModifyUserActivity.class);
+ 			intent.putExtra("fblogin", true);
+ 			startActivity(intent);
 			break;
 		}
 		case R.id.login_txt:

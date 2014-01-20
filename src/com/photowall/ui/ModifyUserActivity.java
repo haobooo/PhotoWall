@@ -20,7 +20,7 @@ import com.photowall.tools.Constants;
 
 public class ModifyUserActivity extends Activity {
 
-	private ImageView nextbtn;
+	private TextView nextbtn;
 	
 	private PhotoWallApplication app;
     private HttpSession httpSession;
@@ -47,7 +47,7 @@ public class ModifyUserActivity extends Activity {
 	
 	public void initviews()
 	{
-		nextbtn = (ImageView) findViewById(R.id.nextbtn);
+		nextbtn = (TextView) findViewById(R.id.nextbtn);
 		nextbtn.setOnClickListener(new OnClickListener() {
 			
 			@Override
