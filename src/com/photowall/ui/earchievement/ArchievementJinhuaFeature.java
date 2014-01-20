@@ -26,8 +26,8 @@ public class ArchievementJinhuaFeature extends Activity
 implements View.OnClickListener
 {
 
-	private ImageView menu_image;
-	private ImageView back_image;
+	private ImageView settingsImage;
+	private ImageView backImage;
 	private TextView title_text;
 	private GridView gridView;
 	private GridAdapter gridAdapter;
@@ -36,17 +36,19 @@ implements View.OnClickListener
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.archi_jinhua_layout);
+		
 		initviews();
 	}
 	public void initviews()
 	{
-		menu_image = (ImageView) findViewById(R.id.menu_image);
-		menu_image.setOnClickListener(this);
+		settingsImage = (ImageView) findViewById(R.id.title_settings);
+		settingsImage.setOnClickListener(this);
 		
-		back_image = (ImageView) findViewById(R.id.back_image);
-		back_image.setOnClickListener(this);
+		backImage = (ImageView) findViewById(R.id.title_back);
+		backImage.setOnClickListener(this);
 		
 		title_text = (TextView) findViewById(R.id.title_text);
 		title_text.setText("FEATURED");
@@ -111,13 +113,13 @@ implements View.OnClickListener
 	 @Override
 		public void onClick(View v) {
 			switch (v.getId()) {
-				case R.id.back_image:
+				case R.id.title_back:
 				{
 					finish();
 					
 					break;
 				}
-				case R.id.menu_image:
+				case R.id.title_settings:
 				{
 					settings();
 					break;

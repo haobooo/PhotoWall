@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:background="#ffffff"
-    >
-    
-<include layout="@layout/action_bar_title"
-    android:id="@+id/header"
-    android:layout_alignParentTop="true"
-    />
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
 
-<RelativeLayout 
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_below="@+id/header"
-    >
-     <GridView
+    <include
+        layout="@layout/explorer_title" />
+
+    <GridView
         android:id="@+id/gridView"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_margin="10dip"
-        android:numColumns="2"
-        android:verticalSpacing="10dp" 
-        android:horizontalSpacing="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="12dip"
         android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
         android:scrollbars="none"
-        >
+        android:verticalSpacing="10dp" >
     </GridView>
-</RelativeLayout>
-</RelativeLayout>
+
+</LinearLayout>
