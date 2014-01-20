@@ -17,29 +17,34 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class HotPostsFramgmentActivity extends FragmentActivity
 implements OnCenterItemClickListener, View.OnClickListener
 {
-	private ImageView menu_image;
+	private ImageView settingsImage;
+	private ImageView backImage;
 	
-	private ImageView back_image;
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.hotpost_viewpager_fragment);
+		setContentView(R.layout.title_viewpager_fragment);
 		initviews();
 		
 	}
 	
 	public void initviews()
 	{
-		menu_image = (ImageView) findViewById(R.id.menu_image);
-		menu_image.setOnClickListener(this);
+		settingsImage = (ImageView) findViewById(R.id.title_settings);
+		settingsImage.setOnClickListener(this);
 		
-		back_image = (ImageView) findViewById(R.id.back_image);
-		back_image.setOnClickListener(this);
+		backImage = (ImageView) findViewById(R.id.title_back);
+		backImage.setOnClickListener(this);
+		
+		TextView title = (TextView) findViewById(R.id.title_text);
+		title.setText("HOT POSTS");
+		
 		//Set the pager with an adapter
         ViewPager pager = (ViewPager)findViewById(R.id.viewpager);
         HotPostPhotoPagerAdapter adapter = new HotPostPhotoPagerAdapter(getSupportFragmentManager());
@@ -76,13 +81,13 @@ implements OnCenterItemClickListener, View.OnClickListener
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-			case R.id.back_image:
+			case R.id.title_back:
 			{
 				finish();
 				
 				break;
 			}
-			case R.id.menu_image:
+			case R.id.title_settings:
 			{
 				settings();
 				break;

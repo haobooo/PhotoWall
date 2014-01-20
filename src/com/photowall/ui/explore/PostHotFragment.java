@@ -115,7 +115,7 @@ public class PostHotFragment extends Fragment {
 
 		@Override
 		public View getView(int pos, View view, ViewGroup arg2) {
-			view = inflater.inflate(R.layout.grid_card_item_layout, null);
+			view = inflater.inflate(R.layout.staggered_grid_card_item_layout, null);
 			ImageView quest_border = (ImageView) view.findViewById(R.id.quest_border);
 			final int position = pos;
 			quest_border.setOnClickListener(new OnClickListener() {
@@ -127,6 +127,10 @@ public class PostHotFragment extends Fragment {
 					startActivity(intent);
 				}
 			});
+			
+			ImageView show_img = (ImageView) view.findViewById(R.id.show_img);
+			show_img.setImageResource(list.get(pos).getTestDrawableid());
+			
 			return view;
 		}
     	

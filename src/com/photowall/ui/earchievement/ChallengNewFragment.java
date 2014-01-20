@@ -115,7 +115,7 @@ public class ChallengNewFragment extends Fragment {
 
 		@Override
 		public View getView(int pos, View view, ViewGroup arg2) {
-			view = inflater.inflate(R.layout.grid_card_item_layout, null);
+			view = inflater.inflate(R.layout.tiled_grid_card_item_layout, null);
 			
 			ImageView quest_border = (ImageView) view.findViewById(R.id.quest_border);
 			final int position = pos;

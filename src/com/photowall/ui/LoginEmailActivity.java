@@ -128,7 +128,7 @@ public class LoginEmailActivity extends Activity {
 		|| et_login_password.getText().toString().trim().equals("")
 		)
 		{
-			return false;
+			return true;
 		}
 		return true;
 	}
