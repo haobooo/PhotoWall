@@ -32,8 +32,8 @@ import com.photowall.ui.quests.QuestObject;
 public class ExploreActivity extends Activity 
 implements View.OnClickListener
 {
-	private ImageView menu_image;
-	private ImageView back_image;
+	private ImageView backImage;
+	private ImageView settingsImage;
 	
 	private TextView title_text;
 	private GridView hot_grid;
@@ -51,17 +51,21 @@ implements View.OnClickListener
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
+		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 		setContentView(R.layout.explore_layout);
+		
+		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.explorer_title);
+		
 		initview();
 	}
 	public void initview()
 	{
-		menu_image = (ImageView) findViewById(R.id.menu_image);
-		menu_image.setOnClickListener(this);
+		backImage = (ImageView) findViewById(R.id.title_back);
+		backImage.setOnClickListener(this);
 		
-		back_image = (ImageView) findViewById(R.id.back_image);
-		back_image.setOnClickListener(this);
+		settingsImage = (ImageView) findViewById(R.id.title_settings);
+		settingsImage.setOnClickListener(this);
 		
 		btn_archi_list = (ImageView) findViewById(R.id.btn_archi_list);
 		btn_archi_list.setOnClickListener(this);
@@ -134,13 +138,13 @@ implements View.OnClickListener
 			startActivity(intent);
 			break;
 		}
-		case R.id.back_image:
+		case R.id.title_back:
 		{
 			finish();
 			
 			break;
 		}
-		case R.id.menu_image:
+		case R.id.title_settings:
 		{
 			settings();
 			break;

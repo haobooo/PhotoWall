@@ -148,7 +148,8 @@
         <activity android:name="com.photowall.PhotoHomePageActivity"
             android:theme="@style/CustomTitleTheme"></activity>
         <activity android:name="com.photowall.ui.PhotoProfileActivity"></activity>
-        <activity android:name="com.photowall.ui.ExploreActivity"></activity>
+        <activity android:name="com.photowall.ui.ExploreActivity"
+            android:theme="@style/CustomTitleTheme"></activity>
         <activity android:name="com.photowall.ui.quests.QuestDetailsActivity"></activity>
         <activity android:name="com.photowall.ui.earchievement.ArchievementDetailsActivity"></activity>
         <activity android:name="com.photowall.ui.earchievement.ArchievementJinhuaFeature"></activity>

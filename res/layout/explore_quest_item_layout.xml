@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="120dip" 
-    android:background="@drawable/broder"
-    android:layout_margin="15dip"
-    >
+    android:layout_height="120dp"
+    android:background="@drawable/rect_with_boder" >
+
     <!-- quest cover -->
-<ImageView 
-    android:id="@+id/quest_cover"
-    android:layout_width="fill_parent"
-    android:layout_height="120dip"
-    android:background="@drawable/quest_test"
-    />
-<TextView 
-    android:id="@+id/quest_title"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_marginLeft="10dip"
-    android:layout_marginTop="10dip"
-    android:textSize="20sp"
-    android:textStyle="bold"
-    android:text="Must In My Life"
-    android:textColor="#ffffff"
-    />
-<TextView 
-    android:id="@+id/quest_arch_number"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/quest_title"
-    android:layout_alignParentLeft="true"
-    android:layout_marginLeft="10dip"
-    android:layout_marginTop="10dip"
-    android:textStyle="italic"
-    android:text="100 archievements"
-    android:textColor="#ffffff"
-    />
+    <ImageView
+        android:id="@+id/quest_cover"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:padding="2dp"
+        android:src="@drawable/quest_test"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/quest_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:text="Must In My Life"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/quest_arch_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/quest_title"
+        android:layout_marginLeft="10dip"
+        android:text="100 archievements"
+        android:textColor="#ffffff"
+        android:textStyle="italic" />
+
 </RelativeLayout>

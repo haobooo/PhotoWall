@@ -9,7 +9,7 @@
     >
     
     <ImageView
-        android:id="@+id/iv_set"
+        android:id="@+id/title_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -30,20 +30,13 @@
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"
-        android:text="HOME"
-        android:textColor="#ff0000"
+        android:text="EXPLORER"
+        android:textColor="#ee5457"
         android:textSize="18sp"
-        android:textStyle="bold"
         geekui:customTypeface="fonts/TrajanPro-Bold.ttf" />
 
     <ImageView
-        android:id="@+id/iv_creat"
-        android:layout_width="45dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/menu_top_quest_btn" />
-
-    <ImageView
-        android:id="@+id/iv_menu"
+        android:id="@+id/title_settings"
         android:layout_width="31.5dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
