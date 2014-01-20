@@ -64,6 +64,8 @@
                 android:id="@+id/user_name_image"
                 android:layout_width="47dp"
                 android:layout_height="47dp"
+                android:padding="1dp"
+                android:background="@drawable/round_rect_with_boder"
                 android:src="@drawable/dummy_sidemenu_profile_photo" />
             
             <TextView
