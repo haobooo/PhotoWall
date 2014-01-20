@@ -80,8 +80,8 @@ implements View.OnClickListener
 	}
 	public void initviews()
 	{
-		menu_image = (ImageView) findViewById(R.id.menu_image);
-		menu_image.setOnClickListener(this);
+//		menu_image = (ImageView) findViewById(R.id.menu_image);
+//		menu_image.setOnClickListener(this);
 		
 		guide_bottom = (ViewGroup) findViewById(R.id.guide_bottom);
 		if(isGuide)
@@ -93,8 +93,8 @@ implements View.OnClickListener
 			guide_bottom.setVisibility(View.GONE);
 			findViewById(R.id.headimg).setVisibility(View.GONE);
 		}
-		back_image = (ImageView) findViewById(R.id.back_image);
-		back_image.setOnClickListener(this);
+//		back_image = (ImageView) findViewById(R.id.back_image);
+//		back_image.setOnClickListener(this);
 		questlist = (ListView) findViewById(R.id.questlist);
 		questPageAdapter = new QuestPageAdapter(list, this);
 		questPageAdapter.setMainhaHandler(mainHandler);
@@ -126,17 +126,17 @@ implements View.OnClickListener
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-			case R.id.back_image:
-			{
-				finish();
-				
-				break;
-			}
-			case R.id.menu_image:
-			{
-				settings();
-				break;
-			}
+//			case R.id.back_image:
+//			{
+//				finish();
+//				
+//				break;
+//			}
+//			case R.id.menu_image:
+//			{
+//				settings();
+//				break;
+//			}
 		}
 	}
 	public void settings()

@@ -1,75 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:background="#F1F1F1"
-    >
-    <include layout="@layout/action_bar_title"
-    android:id="@+id/header"
-    android:layout_alignParentTop="true"
-    />
-<ImageView 
-    android:id="@+id/headimg"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/header"
-    android:layout_marginTop="5dip"
-    android:src="@drawable/questhead"
-    android:layout_centerHorizontal="true"
-    />
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
 
-<ListView 
-    android:id="@+id/questlist"
-    android:layout_below="@+id/headimg"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:divider="#F1F1F1"
-    android:dividerHeight="20dip"
-    android:cacheColorHint="#00000000"
-    ></ListView>
-<RelativeLayout 
-    android:layout_width="fill_parent"
-    android:layout_height="80dip"
-    android:background="#a9ffffff"
-    android:layout_alignParentBottom="true"
-    android:id="@+id/guide_bottom"
-    >
-    
-    <LinearLayout 
+    <ImageView
+        android:id="@+id/headimg"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/startbtn"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-        <TextView 
-            android:id="@+id/fllowedNumber"
-            android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:text="0/3"
-        	android:textSize="18sp"
-        	android:textStyle="bold"
-        	android:textColor="#ee5457"
-            />
-        <TextView 
-            android:layout_marginLeft="10dip"
-            android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:text="FOLLOWED"
-        	android:textSize="18sp"
-        	android:textStyle="bold"
-        	android:textColor="#ee5457"
-            />
-    </LinearLayout>
-    <ImageView 
-       android:id="@+id/startbtn"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignParentRight="true"
-       android:layout_alignParentBottom="true"
-       android:src="@drawable/btn_start"
-       android:layout_margin="10dip"
-       />
-</RelativeLayout>
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/questhead"
+        android:scaleType="fitStart" />
+
+    <RelativeLayout
+        android:id="@+id/guide_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        
+        <ListView
+            android:id="@+id/questlist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:cacheColorHint="@null"
+            android:divider="@null"
+            android:dividerHeight="13dp" >
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="54dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="#ccffffff" >
+
+            <TextView
+                android:id="@+id/fllowedNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27.5dp"
+                android:text="0/3"
+                android:textColor="#ee5457"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="FOLLOWED"
+                android:textColor="#ee5457"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            
+            <ImageView
+	            android:id="@+id/startbtn"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:layout_marginRight="12.5dp"
+	            android:src="@drawable/btn_start"
+	            android:scaleType="fitEnd" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
