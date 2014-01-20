@@ -29,7 +29,7 @@ public class ChallengNewFragment extends Fragment {
 
     private String title;
     private View mView;
-    private StaggeredGridView hot_gridView;
+    private GridView hot_gridView;
     private GridAdapter gridAdapter;
     ArrayList<ArchievementItemBean> mlist;
     private ArchipaihangFramgmentActivity activity;
@@ -56,18 +56,18 @@ public class ChallengNewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         
-        mView = inflater.inflate(R.layout.hot_fragment_gridview,container, false);
-        hot_gridView = (StaggeredGridView) mView.findViewById(R.id.hot_gridView);
+        mView = inflater.inflate(R.layout.tiled_gridview_fragment,container, false);
+        hot_gridView = (GridView) mView.findViewById(R.id.hot_gridView);
         gridAdapter = new GridAdapter(mlist, activity);
         hot_gridView.setAdapter(gridAdapter);
-        hot_gridView.setOnItemClickListener(new StaggeredGridView.OnItemClickListener() {
+        hot_gridView.setOnItemClickListener(new GridView.OnItemClickListener() {
 
-            @Override
-            public void onItemClick(StaggeredGridView parent, View view,
-                    int position, long id) {
-                Intent intent = new Intent(activity,ArchievementDetailsActivity.class);
-                startActivity(intent);                
-            }
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				Intent intent = new Intent(activity,ArchievementDetailsActivity.class);
+                startActivity(intent); 
+			}
             
         });
         return mView;
@@ -116,6 +116,7 @@ public class ChallengNewFragment extends Fragment {
 		@Override
 		public View getView(int pos, View view, ViewGroup arg2) {
 			view = inflater.inflate(R.layout.grid_card_item_layout, null);
+			
 			ImageView quest_border = (ImageView) view.findViewById(R.id.quest_border);
 			final int position = pos;
 			quest_border.setOnClickListener(new OnClickListener() {

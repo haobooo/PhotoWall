@@ -60,7 +60,7 @@ public class NewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         
-        mView = inflater.inflate(R.layout.hot_fragment_gridview,container, false);
+        mView = inflater.inflate(R.layout.tiled_gridview_fragment,container, false);
         hot_gridView = (GridView) mView.findViewById(R.id.hot_gridView);
         gridAdapter = new GridAdapter(mlist, activity);
         hot_gridView.setAdapter(gridAdapter);
