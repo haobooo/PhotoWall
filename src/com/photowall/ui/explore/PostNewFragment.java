@@ -116,17 +116,17 @@ public class PostNewFragment extends Fragment {
 		@Override
 		public View getView(int pos, View view, ViewGroup arg2) {
 			view = inflater.inflate(R.layout.staggered_grid_card_item_layout, null);
-			ImageView quest_border = (ImageView) view.findViewById(R.id.quest_border);
-			final int position = pos;
-			quest_border.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View arg0) {
-//					Toast.makeText(activity, position+"", Toast.LENGTH_SHORT).show();
-					Intent intent = new Intent(activity,QuestDetailsActivity.class);
-					startActivity(intent);
-				}
-			});
+//			ImageView quest_border = (ImageView) view.findViewById(R.id.quest_border);
+//			final int position = pos;
+//			quest_border.setOnClickListener(new OnClickListener() {
+//				
+//				@Override
+//				public void onClick(View arg0) {
+////					Toast.makeText(activity, position+"", Toast.LENGTH_SHORT).show();
+//					Intent intent = new Intent(activity,QuestDetailsActivity.class);
+//					startActivity(intent);
+//				}
+//			});
 			
 			ImageView show_img = (ImageView) view.findViewById(R.id.show_img);
 			show_img.setImageResource(list.get(pos).getTestDrawableid());

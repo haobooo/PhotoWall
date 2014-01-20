@@ -1,136 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/roundcorner"
-     >
-     
-    <RelativeLayout 
-        android:id="@+id/img_layout"
-        android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-        >
-    <ImageView 
-         android:id="@+id/show_img"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:src="@drawable/testimg"
-         android:scaleType="centerCrop"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="20dip"
-        />
-    </RelativeLayout>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/round_rect_with_boder" >
     
-     <!-- quest type -->
-    <RelativeLayout 
-         android:id="@+id/quest_type"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_alignParentTop="true"
-         android:gravity="left|top"
-        >
-        <ImageView 
-            android:id="@+id/quest_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:visibility="gone"
-            />
-        <ImageView 
-            android:id="@+id/quest_border"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/quest_badge_small"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            />
-    </RelativeLayout>
-    
-<!-- bottom -->
-    <LinearLayout 
-        android:id="@+id/layout_bottom"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-         android:layout_marginTop="15dip"
-         android:layout_below="@+id/img_layout"
-        >
-        <RelativeLayout 
-            android:layout_weight="1"
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:orientation="vertical">
+        
+        <ImageView android:id="@+id/show_img"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="center"
-            >
-            <ImageView 
-                android:id="@+id/archied_img"
+            android:layout_height="wrap_content"
+            android:src="@drawable/testimg"
+            android:scaleType="fitXY"/>
+        
+        <TextView android:id="@+id/show_text"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="Miss Smith?This is Mister Jones here. Could you please cancel my appointments for today?I'm feeling under the weather so I'm going to stay home. "
+            android:textSize="10sp"
+            android:textColor="#363637"/>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/show_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="New York City"
+                android:textColor="#ADADAD"
+                android:textSize="6sp"
+                android:drawableStart="@drawable/postwall_location"/>
+            <TextView android:id="@+id/show_favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/achived_icon"
-                />
-            <TextView 
-                android:id="@+id/archied_number"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_toRightOf="@+id/archied_img"
-                 android:layout_centerVertical="true"
-                 android:textColor="#999999"
-                 android:textSize="13sp"
-                 android:text="100"
-                 android:singleLine="true"
-                 android:layout_marginLeft="2dip"
-                />
-            <TextView 
-                android:id="@+id/archied_intro"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_below="@+id/archied_img"
-                 android:layout_centerInParent="true"
-                 android:textColor="#999999"
-                 android:textSize="13sp"
-                 android:text="Archievements"
-                 android:singleLine="true"
-                />
-        </RelativeLayout>
-        <!-- right -->
-        <RelativeLayout 
-            android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="center"
-            >
-            <ImageView 
-                android:id="@+id/archied_img_2"
+                android:layout_marginLeft="8dp"
+                android:text="100"
+                android:textColor="#ADADAD"
+                android:textSize="6sp"
+                android:drawableStart="@drawable/postwall_icon_like" />
+            <TextView android:id="@+id/show_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/challenging_icon"
-                />
-            <TextView 
-                android:id="@+id/archied_number_2"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_toRightOf="@+id/archied_img_2"
-                 android:layout_centerVertical="true"
-                 android:textColor="#999999"
-                 android:textSize="13sp"
-                 android:text="100"
-                 android:singleLine="true"
-                 android:layout_marginLeft="2dip"
-                />
-            <TextView 
-                android:id="@+id/archied_intro_2"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_below="@+id/archied_img_2"
-                 android:layout_centerInParent="true"
-                 android:textColor="#999999"
-                 android:textSize="13sp"
-                 android:text="Challeging"
-                 android:singleLine="true"
-                />
-        </RelativeLayout>
+                android:layout_marginLeft="8dp"
+                android:text="100"
+                android:textColor="#ADADAD"
+                android:textSize="6sp"
+                android:drawableStart="@drawable/postwall_icon_comment" />
+        </LinearLayout>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/menu_list_cut_off_rule" />
+        
+		<LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="34dp"
+            android:gravity="center_vertical">
+            
+		    <ImageView android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:padding="1dp"
+                android:background="@drawable/round_rect_with_boder"
+		        android:src="@drawable/postwall_user_photo"/>
+		    
+		    <TextView
+                android:id="@+id/user_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:text="username"
+                android:textColor="@color/text_color_black"
+                android:textSize="20sp" />
+        </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+    
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/postwall_liked"/>
+</FrameLayout>
+
