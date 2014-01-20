@@ -185,61 +185,61 @@ implements View.OnClickListener
     		guide_layer.setVisibility(View.GONE);
     	}
     	
-    	showmenubtn = (ImageView) findViewById(R.id.iv_set);
-    	title_text = (TextView) findViewById(R.id.title_text);
-    	id_tap_types = (TextView) findViewById(R.id.id_tap_types);
-    	mSpinner = (Spinner) findViewById(R.id.spinnered);
-    	showquestbtn = (ImageView) findViewById(R.id.iv_creat);
-    	iv_menu = (ImageView) findViewById(R.id.iv_menu);
-    	
-    	showmenubtn.setOnClickListener(this);
-    	showquestbtn.setOnClickListener(this);
-    	iv_menu.setOnClickListener(this);
-    	
-    	//spinner #######################################
-    	 mSpinnerArrayStr = getResources().getStringArray(R.array.photo_classify);
-         classifyIDs = getResources().getStringArray(R.array.photo_classify_id);
-    	 images = getResources().obtainTypedArray(R.array.photo_classify_drawable_all);
-    	 mSpinnerAdapter = new ArrayAdapter<String>(this,R.layout.simple_spinner_item,mSpinnerArrayStr){
-             @Override  
-             public View getDropDownView(int position, View convertView, ViewGroup parent) {  
-                 if(convertView==null){  
-                     convertView = getLayoutInflater().inflate(R.layout.spinner_dropdown_item, parent, false);  
-                 }  
-                 TextView label = (TextView) convertView.findViewById(R.id.label);  
-                 label.setText(getItem(position));  
-                 ImageView imageView = (ImageView) convertView.findViewById(R.id.icon);
-                 Drawable drawable = images.getDrawable(position);
-                 imageView.setImageDrawable(drawable);
-                 return convertView;  
-             }  
-         };
-    	
-    	id_tap_types.setOnClickListener(this);
-        id_tap_types.setOnTouchListener(new OnTouchListener() {
-			
-			@Override
-			public boolean onTouch(View arg0, MotionEvent event) {
-				mSpinner.onTouchEvent(event);
-				return false;
-			}
-		});
-        
-        mSpinnerAdapter.setDropDownViewResource( android.R.layout.preference_category);
-        mSpinner.setAdapter(mSpinnerAdapter);
-        mSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1,
-                    int pos, long arg3) {
-            	//change the name
-            	id_tap_types.setText(mSpinnerArrayStr[pos]);
-            	
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-            }
-        });
+//    	showmenubtn = (ImageView) findViewById(R.id.iv_set);
+//    	title_text = (TextView) findViewById(R.id.title_text);
+//    	id_tap_types = (TextView) findViewById(R.id.id_tap_types);
+//    	mSpinner = (Spinner) findViewById(R.id.spinnered);
+//    	showquestbtn = (ImageView) findViewById(R.id.iv_creat);
+//    	iv_menu = (ImageView) findViewById(R.id.iv_menu);
+//    	
+//    	showmenubtn.setOnClickListener(this);
+//    	showquestbtn.setOnClickListener(this);
+//    	iv_menu.setOnClickListener(this);
+//    	
+//    	//spinner #######################################
+//    	 mSpinnerArrayStr = getResources().getStringArray(R.array.photo_classify);
+//         classifyIDs = getResources().getStringArray(R.array.photo_classify_id);
+//    	 images = getResources().obtainTypedArray(R.array.photo_classify_drawable_all);
+//    	 mSpinnerAdapter = new ArrayAdapter<String>(this,R.layout.simple_spinner_item,mSpinnerArrayStr){
+//             @Override  
+//             public View getDropDownView(int position, View convertView, ViewGroup parent) {  
+//                 if(convertView==null){  
+//                     convertView = getLayoutInflater().inflate(R.layout.spinner_dropdown_item, parent, false);  
+//                 }  
+//                 TextView label = (TextView) convertView.findViewById(R.id.label);  
+//                 label.setText(getItem(position));  
+//                 ImageView imageView = (ImageView) convertView.findViewById(R.id.icon);
+//                 Drawable drawable = images.getDrawable(position);
+//                 imageView.setImageDrawable(drawable);
+//                 return convertView;  
+//             }  
+//         };
+//    	
+//    	id_tap_types.setOnClickListener(this);
+//        id_tap_types.setOnTouchListener(new OnTouchListener() {
+//			
+//			@Override
+//			public boolean onTouch(View arg0, MotionEvent event) {
+//				mSpinner.onTouchEvent(event);
+//				return false;
+//			}
+//		});
+//        
+//        mSpinnerAdapter.setDropDownViewResource( android.R.layout.preference_category);
+//        mSpinner.setAdapter(mSpinnerAdapter);
+//        mSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+//
+//            @Override
+//            public void onItemSelected(AdapterView<?> arg0, View arg1,
+//                    int pos, long arg3) {
+//            	//change the name
+//            	id_tap_types.setText(mSpinnerArrayStr[pos]);
+//            	
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> arg0) {
+//            }
+//        });
         //spinner end ##################################
     }
 
@@ -296,9 +296,9 @@ implements View.OnClickListener
 	public void onBackPressed() {
 		
 	  new AlertDialog.Builder(this)
-	  .setTitle("提示")
-	  .setMessage("确定要退出吗?")
-	  .setNegativeButton("确定", new DialogInterface.OnClickListener() {
+	  .setTitle("鎻愮ず")
+	  .setMessage("纭畾瑕侀��鍑哄悧?")
+	  .setNegativeButton("纭畾", new DialogInterface.OnClickListener() {
 		
 		@Override
 		public void onClick(DialogInterface dialog, int arg1) {
@@ -307,7 +307,7 @@ implements View.OnClickListener
 			PhotoHomePageActivity.this.finish();
 		}
 	})
-	.setPositiveButton("取消", null).create().show();
+	.setPositiveButton("取锟斤拷", null).create().show();
 		
 	}
 }

@@ -1,12 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:staggered="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#ffffff"    
-    android:orientation="vertical" 
-    xmlns:app="http://schemas.android.com/apk/res/com.photowall.photowallcommunity">
+    android:orientation="vertical" >
 
-    <com.photowall.widget.staggedGridView.StaggeredGridView
+    <GridView
         android:id="@+id/hot_gridView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -15,8 +13,6 @@
         android:horizontalSpacing="10dp"
         android:gravity="center"
         android:scrollbars="none"
-        staggered:numColumns="2"
-        staggered:drawSelectorOnTop="true"
-        staggered:itemMargin = "10dip"
+        android:numColumns="2"
         />
 </LinearLayout>

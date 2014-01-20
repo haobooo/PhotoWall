@@ -3,130 +3,36 @@
     xmlns:geekui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    
-<!-- header -->
 
-<RelativeLayout
-        android:id="@+id/header"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/menu_bg" 
-        android:layout_alignParentTop="true"
-        android:visibility="gone"
-        >
+    <!-- view pager fragment container -->
+    <RelativeLayout
+        android:id="@+id/pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header" />
 
-            <ImageView
-                android:id="@+id/iv_set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:src="@drawable/menu_top_left_btn"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="5dip"
-                 />
-            <RelativeLayout 
-             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            >
-        <com.photowall.widget.typeface.TypefaceTextView 
-    android:id="@+id/title_text"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_marginLeft="10dip"
-    android:layout_marginTop="10dip"
-    android:textSize="18sp"
-    android:textStyle="bold"
-    android:text="HOME"
-    android:textColor="#ff0000"
-    android:shadowColor="#000000"
-    android:shadowDx="2"
-    android:shadowDy="2"
-    android:shadowRadius="2"
-    geekui:customTypeface="fonts/TrajanPro-Bold.ttf"
-    />
-        </RelativeLayout>
-            <RelativeLayout 
-                android:id="@+id/classify_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@+id/iv_creat"
-                android:layout_marginLeft="10dip"
-                android:gravity="center"
-                android:visibility="gone"
-                >
-                <Spinner  
-                    android:id="@+id/spinnered"  
-                    android:layout_width="wrap_content"  
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:button="@null"
-                    android:visibility="invisible"
-                    android:layout_centerInParent="true"
-                /> 
-                <TextView 
-                    android:id="@+id/id_tap_types"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="All"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:drawableBottom="@drawable/down_arrow"
-                    android:layout_centerInParent="true"
-                    />
-                
-            </RelativeLayout>
-            <ImageView
-                android:id="@+id/iv_creat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toLeftOf="@+id/iv_menu"
-                android:layout_alignParentTop="true"
-                android:src="@drawable/menu_top_quest_btn" />
-            <ImageView
-                android:id="@+id/iv_menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/menu_top_right_btn" 
-                android:layout_centerVertical="true"
-                android:layout_marginRight="5dip"
-                />
-        </RelativeLayout>
-        
-<!-- view pager fragment container -->
-<RelativeLayout 
-    android:id="@+id/pager_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:layout_below="@+id/header"
-    />
- <RelativeLayout 
-        android:id="@+id/guide_layer"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#a9000000"
-        android:visibility="gone"
-        >
-    <ImageView 
-        android:id="@+id/guide_hand"
-        	android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/image_guide_hand"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="80dip"
-        />
-        <ImageView 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/guide_click_home_item"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="80dip"
-            />
-    </RelativeLayout>
+    <!-- guide layer -->
+	<RelativeLayout
+	    android:id="@+id/guide_layer"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#a9000000"
+	    android:visibility="gone" >
+	
+	    <ImageView
+	        android:id="@+id/guide_hand"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="80dip"
+	        android:src="@drawable/image_guide_hand" />
+	
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="80dip"
+	        android:src="@drawable/guide_click_home_item" />
+	</RelativeLayout>
 
 </RelativeLayout>

@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -30,7 +31,7 @@ public class NewFragment extends Fragment {
 
     private String title;
     private View mView;
-    private StaggeredGridView hot_gridView;
+    private GridView hot_gridView;
     private GridAdapter gridAdapter;
     ArrayList<ArchievementItemBean> mlist;
     private PhotoHomePageActivity activity;
@@ -60,7 +61,7 @@ public class NewFragment extends Fragment {
             Bundle savedInstanceState) {
         
         mView = inflater.inflate(R.layout.hot_fragment_gridview,container, false);
-        hot_gridView = (StaggeredGridView) mView.findViewById(R.id.hot_gridView);
+        hot_gridView = (GridView) mView.findViewById(R.id.hot_gridView);
         gridAdapter = new GridAdapter(mlist, activity);
         hot_gridView.setAdapter(gridAdapter);
 //        hot_gridView.setOnItemClickListener(new OnItemClickListener() {
@@ -72,14 +73,14 @@ public class NewFragment extends Fragment {
 //				startActivity(intent);
 //			}
 //        });
-        hot_gridView.setOnItemClickListener(new StaggeredGridView.OnItemClickListener() {
-            
-            @Override
-            public void onItemClick(StaggeredGridView parent, View view, int position,
-                    long id) {
-                Intent intent = new Intent(activity,ArchievementDetailsActivity.class);
+        hot_gridView.setOnItemClickListener(new GridView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				Intent intent = new Intent(activity,ArchievementDetailsActivity.class);
                 startActivity(intent);
-            }
+			}
         });
         return mView;
     }
