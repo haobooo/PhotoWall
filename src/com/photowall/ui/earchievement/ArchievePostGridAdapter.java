@@ -45,7 +45,7 @@ public class ArchievePostGridAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int pos, View view, ViewGroup arg2) {
-		view = inflater.inflate(R.layout.post_grid_item_layout, null);
+		view = inflater.inflate(R.layout.staggered_grid_card_item_layout, null);
 		return view;
 	}
 

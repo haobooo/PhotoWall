@@ -37,10 +37,11 @@ public class ArchievementDetailsActivity extends Activity
 implements View.OnClickListener
 {
 	
-	private ImageView menu_image;
+	private ImageView backImage;
+	private ImageView settingsImage;
 	
 	private ViewGroup guide_layer;
-	private ImageView back_image;
+	
 	
 	private StickyScrollView  ScrollView;
 	private ImageView btn_post;
@@ -106,12 +107,12 @@ implements View.OnClickListener
 		//}
 		
 			
-		menu_image = (ImageView) findViewById(R.id.menu_image);
-		menu_image.setOnClickListener(this);
+		backImage = (ImageView) findViewById(R.id.title_back);
+		backImage.setOnClickListener(this);
 		
 		
-		back_image = (ImageView) findViewById(R.id.back_image);
-			back_image.setOnClickListener(this);
+		settingsImage = (ImageView) findViewById(R.id.title_settings);
+		settingsImage.setOnClickListener(this);
 			
 			btn_checkin = (ImageView) findViewById(R.id.btn_checkin);
 			btn_checkin.setOnClickListener(this);
@@ -198,13 +199,13 @@ implements View.OnClickListener
 			startActivity(intent);
 			break;
 		}
-		case R.id.back_image:
+		case R.id.title_back:
 		{
 			finish();
 			
 			break;
 		}
-		case R.id.menu_image:
+		case R.id.title_settings:
 		{
 			settings();
 			break;

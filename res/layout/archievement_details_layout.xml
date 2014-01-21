@@ -1,203 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:indicator="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:indicator="http://schemas.android.com/apk/res-auto"    
-    xmlns:app="http://schemas.android.com/apk/res/com.photowall.photowallcommunity">
-    
-    <include layout="@layout/action_bar_title"
-    android:id="@+id/header"
-    android:layout_alignParentTop="true"
-    />
-<com.emilsjolander.components.StickyScrollViewItems.StickyScrollView 
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:id="@+id/ScrollView" 
-    android:layout_below="@+id/header"
-    android:scrollbars="none"
-    android:fillViewport="true"
-    android:fadingEdge="none"
-    >
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-        <!-- header -->
-        <RelativeLayout 
+    <include layout="@layout/common_title" />
+
+    <com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#999999"
-            >
-            <!-- pager -->
-            <RelativeLayout 
-                android:id="@+id/pager"
-                android:layout_width="fill_parent"
-                android:layout_height="200dip"
-                android:minHeight="200dip"
-                >
-                <android.support.v4.view.ViewPager
-		        android:id="@+id/help_pager"
-		        android:layout_width="fill_parent"
-		        android:layout_height="fill_parent"
-		        android:layout_alignParentTop="true"
-		        android:layout_above="@+id/help_indicator"
-		        android:background="#ffffff"
-		        />
-		    	<com.viewpagerindicator.CirclePageIndicator
-		        android:id="@+id/help_indicator"
-		        android:layout_height="wrap_content"
-		        android:layout_width="fill_parent"
-		        android:layout_alignParentBottom="true"
-		        android:layout_centerHorizontal="true"
-		        android:padding="5dip"
-                indicator:radius="5dip"	
-                indicator:strokeWidth= "2dip"	  
-                indicator:pageColor="#ffffffff"
-                indicator:snap="true"
-                indicator:fillColor="#ffff0000"    
-                android:background="#00000000"  
-		        />
-            </RelativeLayout>
-            
-            <TextView 
-                android:id="@+id/info"
+            android:orientation="vertical" >
+
+            <!-- header -->
+            <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="3"
-                android:text="test tset test test test test test tes tes"
-                android:textColor="#ffffff"
-                android:layout_below="@+id/pager"
-                android:layout_margin="10dip"
-                />
-            <RelativeLayout 
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/info"
-                 android:background="#ffffff"
-                    android:paddingLeft="18dip"
-                    android:paddingRight="18dip"
-                    android:paddingBottom="10dip"
-                    android:paddingTop="10dip"
-                    android:layout_marginLeft="5dip"
-                    android:layout_marginRight="5dip"
-                >
-                <TextView 
-                    android:id="@+id/title_req"
+                android:background="@drawable/achievement_detail_background"
+                android:orientation="vertical" >
+
+                <!-- pager -->
+                <RelativeLayout
+                    android:id="@+id/pager"
                     android:layout_width="fill_parent"
-                	android:layout_height="wrap_content"
-                	android:layout_alignParentLeft="true"
-                	android:text="REQUIREMENT"
-                	android:textColor="#ff0000"
-                	android:textSize="18sp"
-                	android:gravity="left"
-                    />
-                <LinearLayout 
+                    android:layout_height="232dp"
+                    android:minHeight="232dp"
+                    android:background="@drawable/quest_test" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/help_pager"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentTop="true" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/help_indicator"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="#00000000"
+                        android:padding="5dp"
+                        indicator:fillColor="#ffff0000"
+                        indicator:pageColor="#ffffffff"
+                        indicator:radius="5dp"
+                        indicator:snap="true"
+                        indicator:strokeWidth="1dp" />
+                    
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.5dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/achieved_badge"/>
+                    
+                    
+                    <TextView android:id="@+id/archieve_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="100"
+                        android:drawableLeft="@drawable/achieved_icon"
+                        android:gravity="center" />
+                    
+                    <TextView android:id="@+id/challenge_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/archieve_num"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="100"
+                        android:drawableLeft="@drawable/challenge_icon"
+                        android:gravity="center" />
+                    
+                    <ImageView android:id="@+id/archieve_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/btn_detail"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginRight="12dp"/>
+                </RelativeLayout>
+				
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.5dp"
+                    android:background="@drawable/menu_list_cut_off_rule" />
+
+                <TextView
+                    android:id="@+id/info"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:maxLines="3"
+                    android:text="In the first reshuffle of the CFA executive board in a decade, Cai was elected to replace the 75-year-old Yuan Weimin, who had remained as CFA president since 1992."
+                    android:textColor="#ffffff"
+                    android:ellipsize="end" />
+				
+                <TextView
+                    android:id="@+id/title_req"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="left"
+                    android:text="REQUIREMENT:"
+                    android:textColor="#ee5458"
+                    android:textSize="18sp" />
+                
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
                     android:orientation="vertical"
-                    android:layout_below="@+id/title_req"
-                    >
-                    <TextView 
-                    android:layout_width="fill_parent"
-                	android:layout_height="wrap_content"
-                	android:text="make 3 post(3/3)"
-                	android:textColor="#000000"
-                	android:drawableLeft="@drawable/icon_tick"
-                	android:drawablePadding="3dip"
-                    />
-                    <TextView 
-                    android:layout_width="fill_parent"
-                	android:layout_height="wrap_content"
-                	android:text="make 1 photo post  between 5AM-6AM"
-                	android:textColor="#000000"
-                	android:drawableLeft="@drawable/icon_tick"
-                	android:drawablePadding="3dip"
-                    />
-                    <TextView 
-                    android:layout_width="fill_parent"
-                	android:layout_height="wrap_content"
-                	android:text="make 1 photo post  between 0AM-1AM"
-                	android:textColor="#000000"
-                	android:drawableLeft="@drawable/icon_tick"
-                	android:drawablePadding="3dip"
-                    />
-                </LinearLayout>
-            </RelativeLayout>
-            
-            
-        </RelativeLayout>
-        <!-- sticky -->
-		<RelativeLayout 
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:tag="sticky"
-            android:background="@drawable/button_bar_background"
-            >
-            <ImageView 
-                android:id="@+id/btn_checkin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_check_in"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                />
-             <ImageView 
-                 android:id="@+id/btn_post"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_post"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/btn_checkin"
-                android:layout_toLeftOf="@+id/btn_challeng"
-                android:layout_marginLeft="5dip"
-                android:layout_marginRight="5dip"
-                />
-              <ImageView 
-                  android:id="@+id/btn_challeng"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_add_to_challeng"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                />
-        </RelativeLayout>
-        <com.photowall.widget.ui.ScrollGridView 
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/postgrid"
-            android:numColumns="2"
-            android:verticalSpacing="10dip"
-            android:horizontalSpacing="10dip"
-            android:background="#ffffff"
-            />
-            
-    </LinearLayout>
-</com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
+                    android:background="@drawable/round_rect_with_red_boder"
+                    android:padding="4dp" >
 
-<RelativeLayout 
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_tick"
+                        android:drawablePadding="3dip"
+                        android:text="make 3 post(3/3)"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_tick"
+                        android:drawablePadding="3dip"
+                        android:text="make 1 photo post  between 5AM-6AM"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_tick"
+                        android:drawablePadding="3dip"
+                        android:text="make 1 photo post  between 0AM-1AM"
+                        android:textColor="#000000" />
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+            
+            <!-- sticky -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bar_background"
+                android:paddingLeft="12dp"
+                android:tag="sticky"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/btn_checkin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_check_in" />
+
+                <ImageView
+                    android:id="@+id/btn_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:background="@drawable/btn_post" />
+
+                <ImageView
+                    android:id="@+id/btn_challeng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:background="@drawable/btn_add_to_challeng" />
+            </LinearLayout>
+
+            <com.photowall.widget.ui.ScrollGridView
+                android:id="@+id/postgrid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="12dp"
+                android:background="#ffffff"
+                android:horizontalSpacing="10dip"
+                android:numColumns="2"
+                android:verticalSpacing="10dip" />
+        </LinearLayout>
+    </com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
+
+    <RelativeLayout
         android:id="@+id/guide_layer"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="#a9000000"
-        android:visibility="gone"
-        >
-    <ImageView 
-        android:id="@+id/guide_hand"
-        	android:layout_width="wrap_content"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/guide_hand"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/image_guide_hand"
-            android:layout_centerHorizontal="true"
             android:layout_above="@+id/btm_img"
-        />
-        <ImageView 
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/image_guide_hand" />
+
+        <ImageView
             android:id="@+id/btm_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/guide_click_home_item"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="80dip"
-            />
+            android:src="@drawable/guide_click_home_item" />
     </RelativeLayout>
 
 </RelativeLayout>
