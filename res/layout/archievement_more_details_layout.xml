@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@color/background" >
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <include layout="@layout/common_title"/>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal">
+            
+            <ImageView
+                android:id="@+id/user_name_image"
+                android:layout_width="40.5dp"
+                android:layout_height="40dp"
+                android:padding="1dp"
+                android:background="@drawable/round_rect_with_boder"
+                android:src="@drawable/dummy_ach_detail_creator" />
+            
+            <TextView
+                android:id="@+id/user_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.5dp"
+                android:layout_gravity="center_vertical"
+                android:text="username"
+                android:textColor="@color/text_color_black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/rect_with_boder"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="16.5dp"
+            android:paddingBottom="22.5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            
+            <TextView android:id="@+id/detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ASKS FROM STARTING AND ATTEMPTS TO STOP CURRENTLY EXECUTING"
+                android:textColor="#ee5457"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13sp"
+                android:text="tasks from starting and attempts to stop currently executing tasks.Upon termination, an executor has no tasks actively executing, no tasks awaiting execution, and no new tasks can be submitted"
+ 				android:textColor="@color/text_color_black"
+ 				android:textSize="12.41sp"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/rect_with_boder"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="22.5dp"
+            android:orientation="vertical">
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOW TO ARCHIEVE"
+                android:textColor="#ee5458"
+                android:textSize="16sp"/>
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/dot_red"
+                android:drawablePadding="2dp"
+                android:text="make 3 photo post"
+                android:textColor="@color/text_color_black"
+                android:textSize="13sp"
+                android:paddingLeft="4dp"/>
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/dot_red"
+                android:drawableEnd="@drawable/openingooglemap_icon"
+                android:drawablePadding="2dp"
+                android:text="check-in at Boom's Cafe"
+                android:textColor="@color/text_color_black"
+                android:textSize="13sp"
+                android:paddingLeft="4dp"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/rect_with_boder"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="14.5dp"
+            android:paddingBottom="14.5dp"
+            android:orientation="horizontal">
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icon_tag"
+                android:drawablePadding="2dp"
+                android:text="Tag tag 1"
+                android:textColor="@color/text_color_black"
+                android:textSize="10sp"
+                android:gravity="center"/>
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:drawableStart="@drawable/icon_tag"
+                android:drawablePadding="2dp"
+                android:text="Tag tag 2"
+                android:textColor="@color/text_color_black"
+                android:textSize="10sp"
+                android:gravity="center"/>
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:drawableStart="@drawable/icon_tag"
+                android:drawablePadding="2dp"
+                android:text="Tag tag 3"
+                android:textColor="@color/text_color_black"
+                android:textSize="10sp"
+                android:gravity="center"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/rect_with_boder"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="14.5dp"
+            android:paddingBottom="14.5dp"
+            android:orientation="vertical">
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/quest_flag_cover"
+                android:drawablePadding="2dp"
+                android:text="Quest title text text text text"
+                android:textColor="@color/text_color_black"
+                android:textSize="15sp"
+                android:gravity="center"/>
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/quest_flag_cover"
+                android:drawablePadding="2dp"
+                android:text="Quest title text text text text"
+                android:textColor="@color/text_color_black"
+                android:textSize="15sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+</ScrollView>

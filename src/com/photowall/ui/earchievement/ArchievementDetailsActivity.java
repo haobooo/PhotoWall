@@ -219,6 +219,12 @@ implements View.OnClickListener
 		Intent intent = new Intent(this,PhotoWallSetting.class);
 		startActivity(intent);
 	}
+	
+	public void showArchieveDetail(View view) {
+		Intent intent = new Intent(this, ArchievementMoreDetailsActivity.class);
+		startActivity(intent);
+	}
+	
 	/************************************************
 	 * 
 	 * Viewpager adapter

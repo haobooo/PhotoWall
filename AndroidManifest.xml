@@ -152,6 +152,7 @@
             android:theme="@style/CustomTitleTheme"></activity>
         <activity android:name="com.photowall.ui.quests.QuestDetailsActivity"></activity>
         <activity android:name="com.photowall.ui.earchievement.ArchievementDetailsActivity"></activity>
+        <activity android:name="com.photowall.ui.earchievement.ArchievementMoreDetailsActivity"></activity>
         <activity android:name="com.photowall.ui.earchievement.ArchievementJinhuaFeature"></activity>
         <activity android:name="com.photowall.ui.earchievement.ArchievementHotTag"></activity>
         <activity android:name="com.photowall.ui.earchievement.ArchipaihangFramgmentActivity"></activity>

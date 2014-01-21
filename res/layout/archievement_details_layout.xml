@@ -90,7 +90,8 @@
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_marginBottom="12dp"
-                        android:layout_marginRight="12dp"/>
+                        android:layout_marginRight="12dp"
+                        android:onClick="showArchieveDetail"/>
                 </RelativeLayout>
 				
                 <View
@@ -108,7 +109,10 @@
                     android:maxLines="3"
                     android:text="In the first reshuffle of the CFA executive board in a decade, Cai was elected to replace the 75-year-old Yuan Weimin, who had remained as CFA president since 1992."
                     android:textColor="#ffffff"
-                    android:ellipsize="end" />
+                    android:ellipsize="end"
+                    android:drawableEnd="@drawable/read_more"
+                    android:drawablePadding="2dp"
+                    android:gravity="bottom" />
 				
                 <TextView
                     android:id="@+id/title_req"
