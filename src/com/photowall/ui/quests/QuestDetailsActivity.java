@@ -25,11 +25,11 @@ public class QuestDetailsActivity extends Activity
 implements View.OnClickListener
 {
 
-	private ImageView menu_image;
+	private ImageView backImage;
+	private ImageView settingImage;
 	
 	private GridView gridView;
 	private GridAdapter gridAdapter;
-	private ImageView back_image;
 	
     ArrayList<ArchievementItemBean> mlist = new ArrayList<ArchievementItemBean>();
     
@@ -42,10 +42,10 @@ implements View.OnClickListener
 	}
 	public void initviews()
 	{
-		menu_image = (ImageView) findViewById(R.id.menu_image);
-		menu_image.setOnClickListener(this);
-		back_image = (ImageView) findViewById(R.id.back_image);
-		back_image.setOnClickListener(this);
+		backImage = (ImageView) findViewById(R.id.title_back);
+		backImage.setOnClickListener(this);
+		settingImage = (ImageView) findViewById(R.id.title_settings);
+		settingImage.setOnClickListener(this);
 		
 		gridView = (GridView) findViewById(R.id.gridView);
 		gridAdapter = new GridAdapter(mlist, this);
@@ -107,13 +107,13 @@ implements View.OnClickListener
 	 @Override
 		public void onClick(View v) {
 			switch (v.getId()) {
-				case R.id.back_image:
+				case R.id.title_back:
 				{
 					finish();
 					
 					break;
 				}
-				case R.id.menu_image:
+				case R.id.title_settings:
 				{
 					settings();
 					break;

@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -21,6 +23,7 @@ import com.photowall.photowallcommunity.PhotoWallApplication;
 import com.photowall.photowallcommunity.PhotoWallSetting;
 import com.photowall.photowallcommunity.R;
 import com.photowall.tools.Constants;
+import com.photowall.ui.quests.QuestDetailsActivity;
 import com.photowall.ui.quests.QuestGenerate;
 import com.photowall.ui.quests.QuestObject;
 import com.photowall.ui.quests.QuestPageAdapter;
@@ -129,6 +132,17 @@ implements View.OnClickListener
 				startActivity(intent);
 				finish();
 			}
+		});
+		
+		questlist.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				Intent intent = new Intent(QuestPageActivity.this, QuestDetailsActivity.class);
+				startActivity(intent);
+			}
+			
 		});
 		
 	}

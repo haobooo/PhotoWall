@@ -1,93 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:background="#ffffff"
-    >
-    
-<include layout="@layout/action_bar_title"
-    android:id="@+id/header"
-    android:layout_alignParentTop="true"
-    />
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
 
-<RelativeLayout 
-    android:id="@+id/quest_layout"
-    android:layout_below="@+id/header"
-    android:layout_width="match_parent"
-    android:layout_height="120dip" 
-    android:background="@drawable/broder"
-    android:layout_margin="15dip"
-    >
-    <!-- quest cover -->
-<ImageView 
-    android:id="@+id/quest_cover"
-    android:layout_width="fill_parent"
-    android:layout_height="120dip"
-    android:background="@drawable/quest_test"
-    />
-<TextView 
-    android:id="@+id/quest_title"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_marginLeft="10dip"
-    android:layout_marginTop="10dip"
-    android:textSize="20sp"
-    android:textStyle="bold"
-    android:text="Must In My Life"
-    android:textColor="#ffffff"
-    android:shadowColor="#000000"
-    android:shadowDx="2"
-    android:shadowDy="2"
-    android:shadowRadius="2"
-    />
-<TextView 
-    android:id="@+id/quest_arch_number"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/quest_title"
-    android:layout_alignParentLeft="true"
-    android:layout_marginLeft="10dip"
-    android:layout_marginTop="10dip"
-    android:textStyle="italic"
-    android:text="100 archievements"
-    android:textColor="#ffffff"
-    android:shadowColor="#000000"
-    android:shadowDx="2"
-    android:shadowDy="2"
-    android:shadowRadius="2"
-    />
-<Button 
-       android:id="@+id/followbtn"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignParentRight="true"
-       android:layout_centerVertical="true"
-       android:text="+ FOLLOW"
-       android:textColor="#ffffff"
-       android:textStyle="bold"
-       android:background="@drawable/button_redbg"
-       android:layout_marginRight="10dip"
-       />
-</RelativeLayout>
+    <include layout="@layout/common_title" />
 
-<RelativeLayout 
-    android:layout_below="@+id/quest_layout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-     <GridView
+    <RelativeLayout
+        android:id="@+id/quest_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/quest_test" >
+
+        <TextView
+            android:id="@+id/quest_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dip"
+            android:layout_marginTop="32dip"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="Must In My Life"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/quest_arch_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/quest_title"
+            android:layout_marginLeft="16dip"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="100 archievements"
+            android:textColor="@color/white"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/followbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="9.5dp"
+            android:layout_marginRight="10.5dp"
+            android:background="@drawable/btn_follow"
+            android:text="FOLLOW"
+            android:textColor="@color/follow_color"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <GridView
         android:id="@+id/gridView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_margin="10dip"
-        android:numColumns="2"
-        android:verticalSpacing="10dp" 
+        android:layout_margin="12dip"
         android:horizontalSpacing="10dp"
-        android:gravity="center"
+        android:numColumns="2"
         android:scrollbars="none"
-        >
-    </GridView>
-</RelativeLayout>
-</RelativeLayout>
+        android:verticalSpacing="10dp" />
+
+</LinearLayout>
