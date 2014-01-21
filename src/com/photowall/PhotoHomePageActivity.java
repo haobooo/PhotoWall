@@ -185,16 +185,16 @@ implements View.OnClickListener
     		guide_layer.setVisibility(View.GONE);
     	}
     	
-//    	showmenubtn = (ImageView) findViewById(R.id.iv_set);
+    	showmenubtn = (ImageView) findViewById(R.id.iv_menu);
 //    	title_text = (TextView) findViewById(R.id.title_text);
 //    	id_tap_types = (TextView) findViewById(R.id.id_tap_types);
 //    	mSpinner = (Spinner) findViewById(R.id.spinnered);
-//    	showquestbtn = (ImageView) findViewById(R.id.iv_creat);
-//    	iv_menu = (ImageView) findViewById(R.id.iv_menu);
-//    	
-//    	showmenubtn.setOnClickListener(this);
-//    	showquestbtn.setOnClickListener(this);
-//    	iv_menu.setOnClickListener(this);
+    	showquestbtn = (ImageView) findViewById(R.id.iv_creat);
+    	iv_menu = (ImageView) findViewById(R.id.iv_set);
+    	
+    	showmenubtn.setOnClickListener(this);
+    	showquestbtn.setOnClickListener(this);
+    	iv_menu.setOnClickListener(this);
 //    	
 //    	//spinner #######################################
 //    	 mSpinnerArrayStr = getResources().getStringArray(R.array.photo_classify);
@@ -246,7 +246,7 @@ implements View.OnClickListener
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.iv_set://menu
+		case R.id.iv_menu://menu
 		{
 			getSlidingMenu().showMenu(true);
 //			Toast.makeText(PhotoHomePageActivity.this, "showmenu", Toast.LENGTH_SHORT).show();
@@ -259,7 +259,7 @@ implements View.OnClickListener
 			
 			break;
 		}
-		case R.id.iv_menu:
+		case R.id.iv_set:
 		{
 //			showSet();
 			settings();

@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <include
-        layout="@layout/explorer_title" />
+        layout="@layout/common_title" />
 
     <com.viewpagerindicator.TitlePageIndicator
         android:id="@+id/indicator"

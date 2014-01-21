@@ -54,9 +54,9 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dip"
-        android:background="@drawable/button_redbg"
-        android:text="+ FOLLOW"
-        android:textColor="#ffffff"
+        android:background="@drawable/btn_follow"
+        android:text="FOLLOW"
+        android:textColor="@color/follow_color"
         android:textStyle="bold" />
 
 </RelativeLayout>

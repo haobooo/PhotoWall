@@ -28,13 +28,14 @@ import com.photowall.ui.quests.QuestPageAdapter;
 public class QuestPageActivity extends Activity 
 implements View.OnClickListener
 {
-	private ImageView menu_image;
-
+	private ImageView backImage;
+	private ImageView settingsImage;
+	
 	private ListView questlist;
 	private TextView fllowedNumber;
 	private ImageView startbtn;
 	private ViewGroup guide_bottom;
-	private ImageView back_image;
+	
 	
 	private QuestPageAdapter questPageAdapter;
 	private ArrayList<QuestObject> list = new ArrayList<QuestObject>();
@@ -71,30 +72,40 @@ implements View.OnClickListener
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.quest_page_layout);
+		
 		isGuide = getIntent().getBooleanExtra(Constants.IS_REGISTING, false);
 		PhotoWallApplication.getPhotoWallApplication().setGuideMode(isGuide);
+		
 		initviews();
 		
 	}
 	public void initviews()
 	{
-//		menu_image = (ImageView) findViewById(R.id.menu_image);
-//		menu_image.setOnClickListener(this);
+		backImage = (ImageView) findViewById(R.id.title_back);
+		backImage.setOnClickListener(this);
+		settingsImage = (ImageView) findViewById(R.id.title_settings);
+		settingsImage.setOnClickListener(this);
+		
+		TextView titleContent = (TextView) findViewById(R.id.title_text);
+		titleContent.setText("QUEST TO FOLLOW");
 		
 		guide_bottom = (ViewGroup) findViewById(R.id.guide_bottom);
+		View title = findViewById(R.id.header);
+		
 		if(isGuide)
 		{
 			guide_bottom.setVisibility(View.VISIBLE);
+			title.setVisibility(View.GONE);
 		}
 		else
 		{
 			guide_bottom.setVisibility(View.GONE);
 			findViewById(R.id.headimg).setVisibility(View.GONE);
 		}
-//		back_image = (ImageView) findViewById(R.id.back_image);
-//		back_image.setOnClickListener(this);
+
 		questlist = (ListView) findViewById(R.id.questlist);
 		questPageAdapter = new QuestPageAdapter(list, this);
 		questPageAdapter.setMainhaHandler(mainHandler);
@@ -126,17 +137,17 @@ implements View.OnClickListener
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-//			case R.id.back_image:
-//			{
-//				finish();
-//				
-//				break;
-//			}
-//			case R.id.menu_image:
-//			{
-//				settings();
-//				break;
-//			}
+			case R.id.title_back:
+			{
+				finish();
+				
+				break;
+			}
+			case R.id.title_settings:
+			{
+				settings();
+				break;
+			}
 		}
 	}
 	public void settings()

@@ -6,7 +6,7 @@
     android:orientation="vertical" >
 
     <include
-        layout="@layout/explorer_title" />
+        layout="@layout/common_title" />
 
     <GridView
         android:id="@+id/gridView"

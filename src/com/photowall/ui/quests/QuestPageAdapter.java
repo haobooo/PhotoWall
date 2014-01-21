@@ -65,6 +65,7 @@ public class QuestPageAdapter extends BaseAdapter {
 		quest_arch_number.setText(tempobj.getArchiNumber());
 		String follow = tempobj.isFollowing() == false?"+ FOLLOW":"FOLLOWING";
 		followbtn.setText(follow);
+		followbtn.setSelected(tempobj.isFollowing());
 		followbtn.setOnClickListener(new OnClickListener() {
 			
 			@Override
