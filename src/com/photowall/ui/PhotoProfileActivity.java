@@ -3,6 +3,7 @@ package com.photowall.ui;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,5 +93,10 @@ public class PhotoProfileActivity extends Activity {
 		challeng_grid.setVisibility(View.GONE);
 		archieve_tips.setVisibility(View.GONE);
 		
+	}
+	
+	public void followerList(View view) {
+		Intent intent = new Intent(this, FollowerListActivity.class);
+		startActivity(intent);
 	}
 }

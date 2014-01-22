@@ -55,7 +55,8 @@
 
             <LinearLayout android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:onClick="followerList">
 
                 <TextView
                     android:id="@+id/follower_number"
