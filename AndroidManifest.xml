@@ -159,10 +159,9 @@
         
         <activity android:name="com.photowall.ui.post.PostAstoryActivity"></activity>
         <activity android:name="com.photowall.ui.post.CheckinActivity"></activity>
-        
+        <activity android:name="com.photowall.ui.post.PostStoryDetailActivity"></activity>
         
         <activity android:name="com.photowall.ui.explore.HotPostsFramgmentActivity"></activity>
-        
         
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
 	</application>

@@ -17,6 +17,8 @@ import android.view.View.OnClickListener;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 
 import com.emilsjolander.components.StickyScrollViewItems.StickyScrollView;
@@ -28,6 +30,7 @@ import com.photowall.photowallcommunity.R;
 import com.photowall.ui.post.CheckinActivity;
 import com.photowall.ui.post.PostAstoryActivity;
 import com.photowall.ui.post.PostObject;
+import com.photowall.ui.post.PostStoryDetailActivity;
 import com.photowall.widget.ui.DialogUtils;
 import com.photowall.widget.ui.ScrollGridView;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -151,6 +154,17 @@ implements View.OnClickListener
 	        postadAdapter = new ArchievePostGridAdapter(postlist, this);
 	        postgrid.setAdapter(postadAdapter);
 	        postadAdapter.notifyDataSetChanged();
+	        
+	        postgrid.setOnItemClickListener(new OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1,
+						int arg2, long arg3) {
+					Intent intent = new Intent(ArchievementDetailsActivity.this, PostStoryDetailActivity.class);
+					startActivity(intent);
+				}
+	        	
+	        });
 	        
 	        //guide
 	        guide_layer = (ViewGroup) findViewById(R.id.guide_layer);
