@@ -15,9 +15,9 @@ public class CheckinActivity extends Activity
 implements View.OnClickListener
 {
 
-	private ImageView menu_image;
+	private ImageView backImage;
 	private TextView title_text;
-	private ImageView back_image;
+	private ImageView settingsImage;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,25 +27,25 @@ implements View.OnClickListener
 	}
 	public void initviews()
 	{
-		menu_image = (ImageView) findViewById(R.id.menu_image);
-		menu_image.setOnClickListener(this);
+		settingsImage = (ImageView) findViewById(R.id.title_settings);
+		settingsImage.setOnClickListener(this);
 		
 		title_text = (TextView) findViewById(R.id.title_text);
 		title_text.setText("CHECK IN");
 		
-		back_image = (ImageView) findViewById(R.id.back_image);
-		back_image.setOnClickListener(this);
+		backImage = (ImageView) findViewById(R.id.title_back);
+		backImage.setOnClickListener(this);
 	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-			case R.id.back_image:
+			case R.id.title_back:
 			{
 				finish();
 				
 				break;
 			}
-			case R.id.menu_image:
+			case R.id.title_settings:
 			{
 				settings();
 				break;
