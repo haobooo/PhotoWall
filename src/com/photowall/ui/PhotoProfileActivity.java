@@ -1,5 +1,7 @@
 package com.photowall.ui;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +11,10 @@ import android.widget.GridView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
+import com.photowall.bean.ArchievementItemBean;
+import com.photowall.bean.DataManagerTest;
 import com.photowall.photowallcommunity.R;
+import com.photowall.ui.quests.ProfileMasteryAdapter;
 
 public class PhotoProfileActivity extends Activity {
 
@@ -32,6 +37,12 @@ public class PhotoProfileActivity extends Activity {
 		mastry_grid = (GridView) findViewById(R.id.mastry_grid);
 		archieve_grid = (GridView) findViewById(R.id.archieve_grid);
 		challeng_grid = (GridView) findViewById(R.id.challeng_grid);
+		
+		ArrayList<Object> list = new ArrayList<Object>();
+		list.addAll(DataManagerTest.getArchiData());
+		ProfileMasteryAdapter adapter = new ProfileMasteryAdapter(list, this);
+		mastry_grid.setAdapter(adapter);
+		
 		archieve_tips = (ViewGroup) findViewById(R.id.archieve_tips);
 		
 		radio_btns_group = (RadioGroup) findViewById(R.id.radio_btns_group);
