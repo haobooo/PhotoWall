@@ -37,6 +37,8 @@ public class FollowerListActivity extends Activity {
 		ArrayList<Object> list = new ArrayList<Object>();
 		list.addAll(DataManagerTest.getArchiData());
 		mAdapter = new Mydapter(list, this);
+		
+		mListView.setAdapter(mAdapter);
 	}
 	
 	private static class Mydapter extends BaseAdapter {
