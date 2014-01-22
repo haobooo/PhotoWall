@@ -65,7 +65,7 @@ import com.photowall.widget.utils.ToastManager;
 public class CreateActivity extends Activity implements OnClickListener, OnItemSelectedListener
     ,OnCheckedChangeListener,PostImageListener
     {
-	private ImageView menu_image;
+	private ImageView settingsImage;
 	
 	//guide
 	private ViewGroup guide_layer;
@@ -83,7 +83,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
     private RadioGroup mRadioGroup;
     private EditText mCommentEdit;
     private TextView mTitleTextView;
-    private LinearLayout mInputLayout;
+//    private LinearLayout mInputLayout;
     private LinearLayout mPhotoLayout;
     private String[] str;
     private String[] str_id;
@@ -144,7 +144,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
                 { 
                 	if(mProgressDialog.isShowing())
                 	mProgressDialog.dismiss();
-                    String text="ÉÏ´«³É¹¦";
+                    String text="ï¿½Ï´ï¿½ï¿½É¹ï¿½";
 //                    Toast.makeText(CreateActivity.this, text, Toast.LENGTH_SHORT).show();
                     ToastManager.showToast(CreateActivity.this);
 //                    setResult(RESULT_OK);
@@ -197,16 +197,16 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
     
     private void initView() {
     	
-    	menu_image = (ImageView) findViewById(R.id.menu_image);
-		menu_image.setOnClickListener(this);
+    	settingsImage = (ImageView) findViewById(R.id.title_settings);
+    	settingsImage.setOnClickListener(this);
 		
     	
     	guide_layer = (ViewGroup) findViewById(R.id.guide_layer);
     	
         str = getResources().getStringArray(R.array.photo_classify_name);
         str_id = getResources().getStringArray(R.array.photo_classify_id);
-        mBackImageView = (ImageView) findViewById(R.id.back_image);
-        mMenuImageView = (ImageView) findViewById(R.id.menu_image);
+        mBackImageView = (ImageView) findViewById(R.id.title_back);
+        mMenuImageView = (ImageView) findViewById(R.id.title_settings);
         mTakePhotoImageView = (ImageView) findViewById(R.id.take_photo);
         mUploadImageView = (ImageView) findViewById(R.id.upload_photo);
         mPhotoShowImage = (ImageView) findViewById(R.id.back_photo_show);
@@ -215,7 +215,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
         mInputTitle = (TextView) findViewById(R.id.input_photo_title);
         mInputTitle.addTextChangedListener(titlewatcher);
         mTitleTextView = (TextView) findViewById(R.id.title_text);
-        mInputLayout = (LinearLayout) findViewById(R.id.input_title_layout);
+//        mInputLayout = (LinearLayout) findViewById(R.id.input_title_layout);
         mPhotoLayout = (LinearLayout) findViewById(R.id.photo_layout);
         
         mRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
@@ -267,7 +267,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
 //        }else {
             mTitleTextView.setText("POST A PHOTO");
 //            mSpinner.setVisibility(View.VISIBLE);
-            mInputLayout.setVisibility(View.VISIBLE);
+//            mInputLayout.setVisibility(View.VISIBLE);
             isAchieve = false;
 //        }
         setCreateButtonEnabled();
@@ -291,10 +291,10 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-        case R.id.back_image:
+        case R.id.title_back:
             finish();
             break;
-        case R.id.menu_image:
+        case R.id.title_settings:
 //            boolean[] isMark = {false,false,true,false,true,true,true,true};
 //            PhotoWallTools.showPopupWindow(CreateActivity.this, mMenuImageView, 300, 500, isMark);
         	settings();
@@ -523,7 +523,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
 			return tempbitmap;
 
     }
-    //edittext ÊÂ¼þ´¦Àí
+    //edittext ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
     private TextWatcher titlewatcher = new TextWatcher() {
 
         @Override
@@ -569,7 +569,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
         
     };
 
-    //spinner ÊÂ¼þ´¦Àí
+    //spinner ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
             long arg3) {
@@ -581,7 +581,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
     public void onNothingSelected(AdapterView<?> arg0) {
         
     }
-    //RadioGroup´¦ÀíÊÂ¼þ
+    //RadioGroupï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
     @Override
     public void onCheckedChanged(RadioGroup radiogroup, int checkedId){
         switch (checkedId) {
@@ -642,7 +642,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
         {
             if (!mediaStorageDir.mkdirs())
             {
-                // ÔÚSD¿¨ÉÏ´´½¨ÎÄ¼þ¼ÐÐèÒªÈ¨ÏÞ£º
+                // ï¿½ï¿½SDï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÈ¨ï¿½Þ£ï¿½
                 // <uses-permission
                 // android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
                 Log.d(TAG,
@@ -714,7 +714,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
 		percent = (TextView) view.findViewById(R.id.upload_percent);
 		progressBar = (ProgressBar)view.findViewById(R.id.upload_progressbar);
 		builder.setView(view);
-		builder.setTitle("ÎÄ¼þÉÏ´«");
+		builder.setTitle("ï¿½Ä¼ï¿½ï¿½Ï´ï¿½");
 		dialog = builder.create();
 	}
 	public void showUploadDialog()
