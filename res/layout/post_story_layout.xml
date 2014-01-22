@@ -1,122 +1,97 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"    android:gravity="center_horizontal" 
-    android:background="#ffffff"
-    android:orientation="vertical"
-    >
-    <include layout="@layout/action_bar_title"
-        android:id="@+id/head_layout"
-        android:layout_alignParentTop="true"
-        />  
-     
-     <RelativeLayout 
-         android:layout_below="@+id/head_layout"
-         android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal" 
-    android:background="#ffffff"
-         >
-     <LinearLayout
-         android:id="@+id/intro_info"
-         android:layout_width="fill_parent"
-         android:layout_height="100dip"
-         android:orientation="vertical"
-         android:paddingTop="20dip"
-         android:layout_marginLeft="15dip"
-         android:layout_marginRight="15dip"
-         android:background="@drawable/bg_achievement_detail"
-         android:layout_alignParentTop="true"
-         android:layout_centerHorizontal="true"
-     >
-      <TextView
-        android:id="@+id/input_photo_title"
+    android:orientation="vertical"
+    android:background="@color/background" >
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:id="@+id/intro_info"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#00000000"
-        android:textColor="#ffffff"
-        android:text="testest testetst testetst testetst testetst testetst testetst"
-        android:gravity="left|top"
-     />
-     </LinearLayout>
-     <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/intro_info"
-        android:layout_above="@+id/publish_bottom"
-        android:gravity="center_vertical"
-        android:layout_marginTop="10dip"
-     >
+        android:layout_height="100dip"
+        android:background="@drawable/bg_achievement_detail"
+        android:orientation="vertical"
+        android:paddingTop="20dip" >
+
         <TextView
-         android:id="@+id/words_text"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentTop="true"
-         android:layout_alignParentRight="true"
-         android:text="140 words left"
-         />
-        <EditText
-            android:id="@+id/input_photo_comments"
+            android:id="@+id/input_photo_title"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@+id/words_text"
-            android:layout_above="@+id/radioGroup"
-            android:background="@drawable/input_text_post"
-            android:padding="10dip"
-            android:hint="input description"
+            android:background="#00000000"
             android:gravity="left|top"
-            android:layout_marginBottom="5dip"
-            android:layout_marginLeft="15dip"
-            android:layout_marginRight="15dip"
-         />
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="15dip"
-                android:gravity="left|top"
-                android:layout_alignParentBottom="true"
-                >
+            android:text="testest testetst testetst testetst testetst testetst testetst"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/words_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:layout_gravity="right"
+        android:text="140 words left" />
 
-                <RadioButton
-                    android:id="@+id/location_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/post_facebook"
-                    >
-                </RadioButton>
+    <EditText
+        android:id="@+id/input_photo_comments"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:background="@drawable/round_rect_with_boder"
+        android:gravity="left|top"
+        android:hint="input description"
+        android:padding="10dip" />
+    
+    <TextView android:id="@+id/location"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:drawableLeft="@drawable/icon_location_red"
+        android:drawablePadding="6dp"
+        android:text="Tokyo, Japan"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:background="@color/black"
+        />
+    
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:orientation="horizontal" >
 
-                <RadioButton
-                    android:id="@+id/tag_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:button="@drawable/post_twitter"
-                    >
-                </RadioButton>
-             </RadioGroup>
-     </RelativeLayout>
-	     <RelativeLayout
-	         android:layout_width="fill_parent"
-	         android:layout_height="wrap_content"
-	         android:gravity="center"
-	         android:layout_alignParentBottom="true"
-	         android:id="@+id/publish_bottom"
-	     >
-	     <Button
-	            android:id="@+id/create_btn"
-	            android:layout_width="280dip"
-	            android:layout_height="wrap_content"
-	            android:gravity="center"
-	            android:background="@drawable/post_publish"
-	            android:layout_marginBottom="10dip"
-	            android:layout_centerInParent="true"
-	        />
-	     </RelativeLayout>
-     </RelativeLayout>
-</RelativeLayout>
+        <RadioButton
+            android:id="@+id/location_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/post_facebook" >
+        </RadioButton>
 
+        <RadioButton
+            android:id="@+id/tag_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:button="@drawable/post_twitter"
+            android:checked="true" >
+        </RadioButton>
+    </RadioGroup>
 
+    <Button
+        android:id="@+id/create_btn"
+        android:layout_width="280dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/post_publish"
+        android:gravity="center" />
 
-
-
+</LinearLayout>
