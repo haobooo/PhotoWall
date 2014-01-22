@@ -14,6 +14,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import com.photowall.bean.ArchievementItemBean;
 import com.photowall.bean.DataManagerTest;
 import com.photowall.photowallcommunity.R;
+import com.photowall.ui.quests.ProfileAdapter;
 import com.photowall.ui.quests.ProfileMasteryAdapter;
 
 public class PhotoProfileActivity extends Activity {
@@ -43,6 +44,16 @@ public class PhotoProfileActivity extends Activity {
 		ProfileMasteryAdapter adapter = new ProfileMasteryAdapter(list, this);
 		mastry_grid.setAdapter(adapter);
 		
+		ArrayList<Object> list1 = new ArrayList<Object>();
+		list1.addAll(DataManagerTest.getArchiData());
+		ProfileAdapter adapter1 = new ProfileAdapter(list1, this);
+		archieve_grid.setAdapter(adapter1);
+		
+		ArrayList<Object> list2 = new ArrayList<Object>();
+		list2.addAll(DataManagerTest.getArchiData());
+		ProfileAdapter adapter2 = new ProfileAdapter(list2, this);
+		challeng_grid.setAdapter(adapter2);
+		
 		archieve_tips = (ViewGroup) findViewById(R.id.archieve_tips);
 		
 		radio_btns_group = (RadioGroup) findViewById(R.id.radio_btns_group);
@@ -60,12 +71,12 @@ public class PhotoProfileActivity extends Activity {
 					}
 					case R.id.archieved_radio:
 					{
-						archieve_tips.setVisibility(View.VISIBLE);
+						archieve_grid.setVisibility(View.VISIBLE);
 						break;
 					}
 					case R.id.chalenging_radio:
 					{
-						archieve_tips.setVisibility(View.VISIBLE);
+						challeng_grid.setVisibility(View.VISIBLE);
 						break;
 					}
 
