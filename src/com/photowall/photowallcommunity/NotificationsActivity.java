@@ -53,9 +53,9 @@ public class NotificationsActivity extends Activity implements OnClickListener{
     }
     
     private void initView() {
-        mMenuImageView = (ImageView) findViewById(R.id.menu_image);
+        mMenuImageView = (ImageView) findViewById(R.id.title_settings);
         mMenuImageView.setOnClickListener(this);
-        mBackImageView = (ImageView) findViewById(R.id.back_image);
+        mBackImageView = (ImageView) findViewById(R.id.title_back);
         mBackImageView.setOnClickListener(this);
         mTitleTextView = (TextView) findViewById(R.id.title_text);
         
@@ -89,11 +89,11 @@ public class NotificationsActivity extends Activity implements OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-        case R.id.menu_image:
+        case R.id.title_settings:
             boolean isMark[] = {false,false,false,false,true,true,true,true};;
             PhotoWallTools.showPopupWindow(NotificationsActivity.this, mMenuImageView, 300, 500, isMark);
             break;
-        case R.id.back_image:
+        case R.id.title_back:
             finish();
             break;
 
