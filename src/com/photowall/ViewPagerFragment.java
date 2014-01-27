@@ -70,10 +70,12 @@ implements OnCenterItemClickListener
         //Bind the title indicator to the adapter
         TitlePageIndicator titleIndicator = (TitlePageIndicator)view.findViewById(R.id.indicator);
         titleIndicator.setViewPager(pager);
-        titleIndicator.setFooterIndicatorStyle(IndicatorStyle.Underline);
+        titleIndicator.setFooterIndicatorStyle(IndicatorStyle.None);
+        titleIndicator.setFooterLineHeight(0);
+        //titleIndicator.setFooterIndicatorStyle(IndicatorStyle.Underline);
         titleIndicator.setOnCenterItemClickListener(this);
         titleIndicator.setBackgroundColor(Color.WHITE);
-        titleIndicator.setFooterColor(Color.rgb(238, 84, 88));
+        //titleIndicator.setFooterColor(Color.rgb(238, 84, 88));
         titleIndicator.notifyDataSetChanged();
         titleIndicator.setOnPageChangeListener(new OnPageChangeListener() {
             @Override

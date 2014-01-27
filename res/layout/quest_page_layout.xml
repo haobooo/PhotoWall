@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:orientation="vertical" >
 
     <include layout="@layout/common_title"/>
@@ -11,8 +10,8 @@
         android:id="@+id/headimg"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="12dp"
         android:src="@drawable/questhead"
         android:scaleType="fitStart" />
@@ -68,6 +67,8 @@
 	            android:layout_height="wrap_content"
 	            android:layout_weight="1"
 	            android:layout_marginRight="12.5dp"
+	            android:layout_marginTop="6.5dp"
+	            android:layout_marginBottom="6.5dp"
 	            android:src="@drawable/btn_start"
 	            android:scaleType="fitEnd" />
         </LinearLayout>

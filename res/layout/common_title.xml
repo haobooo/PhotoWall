@@ -31,7 +31,6 @@
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"
-        android:text="EXPLORER"
         android:textColor="#ee5457"
         android:textSize="18sp"
         geekui:customTypeface="fonts/TrajanPro-Bold.ttf" />

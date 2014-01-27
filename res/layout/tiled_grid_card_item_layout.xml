@@ -52,8 +52,8 @@
 		                android:layout_marginLeft="4dip"
 		                android:singleLine="true"
 		                android:text="100"
-		                android:textColor="@color/text_color_black"
-		                android:textSize="13sp" />
+		                android:textColor="#FF999999"
+		                android:textSize="16sp" />
 
 		            <TextView
 		                android:id="@+id/archied_intro"
@@ -62,16 +62,16 @@
 		                android:layout_below="@+id/archied_number"
 		                android:singleLine="true"
 		                android:text="Archievements"
-		                android:textColor="@color/text_color_black"
+		                android:textColor="#FF999999"
 		                android:textSize="6sp" />
 
 		        </RelativeLayout>
 		        
 		    </LinearLayout>
 		    
-		    <LinearLayout android:layout_width="1dp"
+		    <LinearLayout android:layout_width="1px"
 		        android:layout_height="fill_parent"
-		        android:background="@color/text_color_black" />
+		        android:background="#FF999999" />
 		    
 		    <LinearLayout
 		        android:layout_width="0dp"
@@ -96,8 +96,8 @@
 		                android:layout_marginLeft="2dip"
 		                android:singleLine="true"
 		                android:text="100"
-		                android:textColor="@color/text_color_black"
-		                android:textSize="13sp" />
+		                android:textColor="#FF999999"
+		                android:textSize="16sp" />
 
 		            <TextView
 		                android:id="@+id/archied_intro_2"
@@ -106,7 +106,7 @@
 		                android:layout_below="@+id/archied_number_2"
 		                android:singleLine="true"
 		                android:text="Challeging"
-		                android:textColor="@color/text_color_black"
+		                android:textColor="#FF999999"
 		                android:textSize="6sp" />
 
 	            </RelativeLayout>

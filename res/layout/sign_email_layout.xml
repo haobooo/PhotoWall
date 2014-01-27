@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F1F1F1"
     >
     
     <EditText
@@ -17,7 +17,7 @@
         android:gravity="left|center_vertical"
         android:hint="Nickname"
         android:paddingLeft="12dp"
-        android:textColor="@color/black"
+        android:textColor="@color/edit_text_color"
         android:textSize="18.0sp" />
 	
     <EditText
@@ -32,7 +32,7 @@
         android:hint="Vali Email"
         android:inputType="text"
         android:paddingLeft="12dp"
-        android:textColor="@color/black"
+        android:textColor="@color/edit_text_color"
         android:textSize="18.0sp" />
     
     <EditText
@@ -48,10 +48,10 @@
         android:inputType="text"
         android:paddingLeft="12dp"
         android:password="true"
-        android:textColor="@color/black"
+        android:textColor="@color/edit_text_color"
         android:textSize="18.0sp" />
 
-    <Button
+    <com.photowall.widget.typeface.TypefaceTextView
         android:id="@+id/signemail"
         android:layout_width="fill_parent"
         android:layout_height="44dp"
@@ -61,14 +61,30 @@
         android:background="@drawable/sign_email_btn"
         android:text="SIGN UP"
         android:textColor="@color/sign_up_color"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        geekui:customTypeface="fonts/TrajanPro-Regular.otf"
+        android:gravity="center"/>
 	
-    <ImageView
-        android:layout_width="wrap_content"
+    <RelativeLayout android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:src="@drawable/signup1_background"
-        android:scaleType="fitEnd" />
+        android:layout_weight="1">
+        
+        <ImageView android:id="@+id/signup1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:src="@drawable/signup1_background"
+	        android:scaleType="fitEnd" />
+        
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="160dp"
+            android:src="@drawable/brand_new_exprience"/>
+    </RelativeLayout>
+    
     
 </LinearLayout>
 

@@ -4,7 +4,6 @@
     xmlns:geekui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:orientation="vertical" >
     
     <ImageView
@@ -25,7 +24,7 @@
         android:textColor="#666666"
         android:textSize="18sp"
         android:textStyle="bold"
-        geekui:customTypeface="fonts/TrajanPro-Bold.ttf" />
+        geekui:customTypeface="fonts/HelveticaRounded-BoldCond.otf" />
     
     <com.photowall.widget.typeface.TypefaceTextView
         android:id="@+id/email"
@@ -52,7 +51,7 @@
         android:text="a ledgend started in"
         android:textSize="18sp"
         android:textColor="#dadada"
-        geekui:customTypeface="fonts/TrajanPro-Bold.ttf" />
+        geekui:customTypeface="fonts/HelveticaRounded-BoldCond.otf" />
     
     <com.photowall.widget.typeface.TypefaceTextView
         android:id="@+id/boston_us_txt"
@@ -64,7 +63,7 @@
         android:drawableRight="@drawable/signup2_edit_icon"
         android:text="Boston US"
         android:textColor="#5b5b5b"
-        geekui:customTypeface="fonts/TrajanPro-Bold.ttf" />
+        geekui:customTypeface="fonts/HelveticaRounded-BoldCond.otf" />
 
     <com.photowall.widget.typeface.TypefaceTextView
         android:id="@+id/say_title"
@@ -78,7 +77,7 @@
         android:text="said, Username"
         android:textColor="#dadada"
         android:textSize="18sp"
-        geekui:customTypeface="fonts/TrajanPro-Bold.ttf" />
+        geekui:customTypeface="fonts/HelveticaRounded-BoldCond.otf" />
     
     <RelativeLayout android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -93,34 +92,44 @@
         
         <EditText
         	android:id="@+id/saytext"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:layout_height="100dp"
 	        android:layout_marginLeft="31.5dp"
-	        android:background="@drawable/input_large"
+	        android:layout_marginRight="31.5dp"
+	        android:background="@drawable/round_rect_with_grey_boder"
 	        android:gravity="left|top"
 	        android:hint="Input Your Saying..."
-	        android:padding="15dip" />
+	        android:padding="6dip"
+	        android:textSize="16sp" />
         
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="#11ffffff"
-            android:padding="3dip" >
-
-            <TextView
-                android:id="@+id/nextbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_margin="10dip"
-                android:background="@drawable/btn_next"
-                android:text="NEXT"
-                android:textColor="@color/next_color"
-                android:textSize="18sp"
-                android:gravity="center" />
-        </RelativeLayout>
+       <TextView
+           android:id="@+id/nextbtn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentRight="true"
+           android:layout_margin="10dip"
+           android:background="@drawable/btn_next"
+           android:gravity="center"
+           android:text="NEXT"
+           android:textColor="@color/next_color"
+           android:textSize="18sp" />
+        
+       <LinearLayout android:id="@+id/seprator"
+           android:layout_width="fill_parent"
+           android:layout_height="2dp"
+           android:layout_above="@+id/nextbtn"
+           android:background="@color/red"
+           android:orientation="horizontal"
+           />
+       
+       <ImageView android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/seprator"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="20dp"
+           android:layout_marginBottom="30dp"
+           android:src="@drawable/prefer_to_do_it_my_way" />
 
     </RelativeLayout>
     

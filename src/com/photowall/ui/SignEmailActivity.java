@@ -29,7 +29,7 @@ import android.widget.Toast;
 public class SignEmailActivity extends Activity 
 implements View.OnClickListener
 {
-	private Button signemail;
+	private View signemail;
 	
 	private PhotoWallApplication app;
     private HttpSession httpSession;
@@ -58,7 +58,7 @@ implements View.OnClickListener
                         if (err.getErrcode()!=null) {
                             text = err.getErrcode()+"\n"+new String(err.getError().getBytes(),"UTF-8");
                         }else {
-                            text = "·þÎñÆ÷ÎÞÏìÓ¦";
+                            text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦";
                         }
                     } catch (UnsupportedEncodingException e) {
                         e.printStackTrace();
@@ -71,7 +71,7 @@ implements View.OnClickListener
                 { 
                 	netProgressDialog.dismiss();
                 	
-                    String text="×¢²á³É¹¦";
+                    String text="×¢ï¿½ï¿½É¹ï¿½";
                     Toast.makeText(getBaseContext(), text, Toast.LENGTH_SHORT).show();
                     
                     userContent.setIslogin(true);
@@ -102,7 +102,7 @@ implements View.OnClickListener
 	
 	public void initviews()
 	{
-		signemail = (Button) findViewById(R.id.signemail);
+		signemail = findViewById(R.id.signemail);
 		signemail.setOnClickListener(this);
 		
 		et_login_username = (EditText) findViewById(R.id.et_login_username);

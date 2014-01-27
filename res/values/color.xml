@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<color name="window_background">#FFF1F1F1</color>
     <color name="white">#ffffff</color>
     <color name="lucensy">#00000001</color>
     <color name="translucency">#e0000000</color>
@@ -25,4 +25,6 @@
     
     <color name="text_color_black">#333333</color>
     <color name="text_color_link">#ee5458</color>
+    
+    <color name="edit_text_color">#FFB9B9B9</color>
 </resources>

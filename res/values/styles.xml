@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<style name="loading_dialog" parent="android:style/Theme.Dialog">  
+    
+    <style name="AppBaseTheme" parent="android:Theme">
+    </style>
+    
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+    
+	<style name="loading_dialog" parent="android:style/Theme.Dialog">  
         <item name="android:windowFrame">@null</item>  
         <item name="android:windowNoTitle">true</item>   
         <item name="android:windowBackground">@android:color/transparent</item>  
