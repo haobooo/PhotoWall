@@ -10,7 +10,7 @@
         android:id="@+id/intro_info"
         android:layout_width="fill_parent"
         android:layout_height="121dip"
-        android:background="@drawable/rect_with_boder"
+        android:background="@drawable/bg_achievement_detail"
         android:orientation="vertical"
         android:paddingTop="20dip" >
 

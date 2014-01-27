@@ -78,7 +78,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
     private ImageView mUploadImageView;
 //    private Spinner mSpinner;
     private ImageView mPhotoShowImage;
-    private ImageView mCreateButton;
+    private View mCreateButton;
     private TextView mInputTitle;
     private RadioGroup mRadioGroup;
     private EditText mCommentEdit;
@@ -210,7 +210,7 @@ public class CreateActivity extends Activity implements OnClickListener, OnItemS
         mTakePhotoImageView = (ImageView) findViewById(R.id.take_photo);
         mUploadImageView = (ImageView) findViewById(R.id.upload_photo);
         mPhotoShowImage = (ImageView) findViewById(R.id.back_photo_show);
-        mCreateButton = (ImageView) findViewById(R.id.create_btn);
+        mCreateButton = findViewById(R.id.create_btn);
         mCreateButton.setOnClickListener(this);
         mInputTitle = (TextView) findViewById(R.id.input_photo_title);
         mInputTitle.addTextChangedListener(titlewatcher);
