@@ -15,7 +15,7 @@ public class ArchipaihangPhotoPagerAdapter extends FragmentStatePagerAdapter {
 	
 	private ArrayList<Fragment> mFragments;
     private String[] titles = {
-            "Challenging","Archievement"
+            "◆ Challenging","◆ Archievement"
     };
 	
 	public ArchipaihangPhotoPagerAdapter(FragmentManager fm) {

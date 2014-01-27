@@ -36,7 +36,7 @@
                 android:layout_weight="1"
                 android:text="New York City"
                 android:textColor="#ADADAD"
-                android:textSize="6sp"
+                android:textSize="10sp"
                 android:drawableStart="@drawable/postwall_location"/>
             <TextView android:id="@+id/show_favorite"
                 android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:layout_marginLeft="8dp"
                 android:text="100"
                 android:textColor="#ADADAD"
-                android:textSize="6sp"
+                android:textSize="10sp"
                 android:drawableStart="@drawable/postwall_icon_like" />
             <TextView android:id="@+id/show_comment"
                 android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
                 android:layout_marginLeft="8dp"
                 android:text="100"
                 android:textColor="#ADADAD"
-                android:textSize="6sp"
+                android:textSize="10sp"
                 android:drawableStart="@drawable/postwall_icon_comment" />
         </LinearLayout>
         
@@ -66,6 +66,7 @@
 		<LinearLayout 
             android:layout_width="fill_parent"
             android:layout_height="34dp"
+            android:layout_marginBottom="4dp"
             android:gravity="center_vertical">
             
 		    <ImageView android:layout_width="wrap_content"
@@ -82,7 +83,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="username"
                 android:textColor="@color/text_color_black"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
     

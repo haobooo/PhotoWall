@@ -43,10 +43,10 @@ implements View.OnClickListener
 	}
 	public void initviews()
 	{
-		menu_image = (ImageView) findViewById(R.id.menu_image);
+		menu_image = (ImageView) findViewById(R.id.title_settings);
 		menu_image.setOnClickListener(this);
 		
-		back_image = (ImageView) findViewById(R.id.back_image);
+		back_image = (ImageView) findViewById(R.id.title_back);
 		back_image.setOnClickListener(this);
 		
 		title_text = (TextView) findViewById(R.id.title_text);
@@ -63,13 +63,13 @@ implements View.OnClickListener
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-			case R.id.back_image:
+			case R.id.title_back:
 			{
 				finish();
 				
 				break;
 			}
-			case R.id.menu_image:
+			case R.id.title_settings:
 			{
 				settings();
 				break;

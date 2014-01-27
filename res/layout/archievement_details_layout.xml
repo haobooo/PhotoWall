@@ -92,6 +92,17 @@
                         android:layout_marginBottom="12dp"
                         android:layout_marginRight="12dp"
                         android:onClick="showArchieveDetail"/>
+                    
+                    <com.photowall.widget.typeface.TypefaceTextView
+                        android:id="@+id/archieve_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="ARCHIEVEMENT TITLE RAISE TWO PUPPY LIKE TWINS"
+                        indicator:customTypeface="fonts/TrajanPro-Regular.otf"
+                        android:gravity="center" />
                 </RelativeLayout>
 				
                 <View
@@ -172,18 +183,28 @@
                 android:tag="sticky"
                 android:gravity="center_vertical" >
 
-                <ImageView
+                <com.photowall.widget.typeface.TypefaceTextView
                     android:id="@+id/btn_checkin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_check_in" />
+                    android:background="@drawable/btn_check_in"
+                    android:text="CHECK-IN"
+                    android:textSize="6sp"
+                    android:gravity="bottom|center_horizontal"
+                    indicator:customTypeface="fonts/TrajanPro-Regular.otf"
+                    android:textColor="@color/next_color" />
 
-                <ImageView
+                <com.photowall.widget.typeface.TypefaceTextView
                     android:id="@+id/btn_post"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dip"
-                    android:background="@drawable/btn_post" />
+                    android:background="@drawable/btn_post"
+                    android:text="POST"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    indicator:customTypeface="fonts/TrajanPro-Regular.otf"
+                    android:textColor="@color/next_color" />
 
                 <ImageView
                     android:id="@+id/btn_challeng"

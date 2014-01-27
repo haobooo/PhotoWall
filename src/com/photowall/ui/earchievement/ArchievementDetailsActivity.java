@@ -47,8 +47,8 @@ implements View.OnClickListener
 	
 	
 	private StickyScrollView  ScrollView;
-	private ImageView btn_post;
-	private ImageView btn_checkin;
+	private View btn_post;
+	private View btn_checkin;
 	
 	protected ViewPager mPager;
     protected PageIndicator mIndicator;
@@ -117,9 +117,9 @@ implements View.OnClickListener
 		settingsImage = (ImageView) findViewById(R.id.title_settings);
 		settingsImage.setOnClickListener(this);
 			
-			btn_checkin = (ImageView) findViewById(R.id.btn_checkin);
+			btn_checkin = findViewById(R.id.btn_checkin);
 			btn_checkin.setOnClickListener(this);
-			btn_post = (ImageView) findViewById(R.id.btn_post);
+			btn_post = findViewById(R.id.btn_post);
 			btn_post.setOnClickListener(this);
 		
 			ScrollView = (StickyScrollView) findViewById(R.id.ScrollView);

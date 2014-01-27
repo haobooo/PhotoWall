@@ -10,7 +10,7 @@
     <com.viewpagerindicator.TitlePageIndicator
         android:id="@+id/indicator"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="@dimen/title_indicator_height" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
