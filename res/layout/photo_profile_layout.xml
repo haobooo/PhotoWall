@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/text_color_black"
@@ -144,9 +145,7 @@
                 android:button="@null"
                 android:checked="true"
                 android:gravity="center"
-                android:singleLine="true"
-                android:drawableTop="@drawable/achived_icon"
-                android:text="10"
+                android:text="@string/profile_mastery"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
 
@@ -158,9 +157,7 @@
                 android:background="@drawable/selector_tab"
                 android:button="@null"
                 android:gravity="center"
-                android:singleLine="true"
-                android:drawableTop="@drawable/achived_icon"
-                android:text="100"
+                android:text="@string/profile_achieved"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
 
@@ -172,9 +169,7 @@
                 android:background="@drawable/selector_tab"
                 android:button="@null"
                 android:gravity="center"
-                android:singleLine="true"
-                android:drawableTop="@drawable/achived_icon"
-                android:text="100"
+                android:text="@string/profile_challenge"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
         </RadioGroup>

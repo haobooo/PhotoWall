@@ -4,11 +4,14 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.GridView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
@@ -25,6 +28,9 @@ public class PhotoProfileActivity extends Activity {
 	private GridView archieve_grid;
 	private GridView challeng_grid;
 	private ViewGroup archieve_tips;
+	private RadioButton radioMastery;
+	private RadioButton radioAchieved;
+	private RadioButton radioChallenge;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +90,22 @@ public class PhotoProfileActivity extends Activity {
 				}
 			}
 		});
+		
+		radioMastery = (RadioButton) findViewById(R.id.mastry_radio);
+		radioAchieved = (RadioButton) findViewById(R.id.archieved_radio);
+		radioChallenge = (RadioButton) findViewById(R.id.chalenging_radio);
+		
+		 AssetManager assets = getAssets();
+		 Typeface typeface = Typeface.createFromAsset(assets, "fonts/TrajanPro-Bold.ttf");
+		radioMastery.setTypeface(typeface);
+		radioAchieved.setTypeface(typeface);
+		radioChallenge.setTypeface(typeface);
+		
+		
+		radioMastery.setText(getString(R.string.profile_mastery, 100));
+		radioAchieved.setText(getString(R.string.profile_achieved, 100));
+		radioChallenge.setText(getString(R.string.profile_challenge, 100));
+		
 	}
 	
 	public void disableALLgrid()

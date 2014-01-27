@@ -244,4 +244,8 @@
     <string name="app_id">1423764471191329</string>
     
     <string name="guide_publish">点击publish发表post</string>
+    
+    <string name="profile_mastery">MASTERY \n %1$d</string>
+    <string name="profile_achieved">ACHIEVED \n %1$d</string>
+    <string name="profile_challenge">CHALLENGE \n %1$d</string>
 </resources>
