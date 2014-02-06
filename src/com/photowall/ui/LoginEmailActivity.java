@@ -43,7 +43,7 @@ public class LoginEmailActivity extends Activity {
 	
     private EditText et_login_email;
     private EditText et_login_password;
-    private Button loginbtn;
+    private View loginbtn;
     
     private Handler mainHandler = new Handler(){
 
@@ -138,7 +138,7 @@ public class LoginEmailActivity extends Activity {
 		netProgressDialog = new NetProgressDialog(this);
 		et_login_email = (EditText) findViewById(R.id.et_login_email);
 		et_login_password = (EditText) findViewById(R.id.et_login_password);
-		loginbtn = (Button) findViewById(R.id.loginbtn);
+		loginbtn = findViewById(R.id.loginbtn);
 		loginbtn.setOnClickListener(new OnClickListener() {
 			
 			@Override

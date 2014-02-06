@@ -12,15 +12,30 @@
         android:layout_height="fill_parent"
         android:orientation="vertical">
         
-        <ImageView
-            android:id="@+id/show_img"
+        <RelativeLayout 
             android:layout_width="fill_parent"
             android:layout_height="114dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/testimg" />
+            android:layout_marginTop="20dp">
+            
+            <ImageView
+                android:id="@+id/show_img"
+                android:layout_width="fill_parent"
+                android:layout_height="114dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/testimg" />
+            
+            <com.photowall.widget.typeface.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="SLEEP ON THE FLOOR"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                geekui:customTypeface="fonts/TrajanPro-Bold.ttf" />
+
+        </RelativeLayout>
         
 		<LinearLayout android:layout_width="fill_parent"
 		    android:layout_height="43dp"
@@ -54,7 +69,8 @@
 		                android:singleLine="true"
 		                android:text="100"
 		                android:textColor="#FF999999"
-		                android:textSize="16sp" />
+		                android:textSize="16sp"
+		                 />
 
 		            <TextView
 		                android:id="@+id/archied_intro"
@@ -122,13 +138,5 @@
         android:layout_height="wrap_content"
         android:src="@drawable/quest_badge_small"/>
     
-    <com.photowall.widget.typeface.TypefaceTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="SLEEP ON THE FLOOR"
-        android:textSize="11sp"
-        android:textColor="@color/white"
-        geekui:customTypeface="fonts/TrajanPro-Bold.ttf"/>
 </FrameLayout>
 

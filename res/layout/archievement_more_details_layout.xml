@@ -41,13 +41,13 @@
             android:layout_marginTop="14.5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:background="@drawable/rect_with_boder"
             android:paddingLeft="14dp"
             android:paddingRight="14dp"
             android:paddingTop="16.5dp"
             android:paddingBottom="22.5dp"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/round_rect_with_grey_boder">
             
             <TextView android:id="@+id/detail_title"
                 android:layout_width="wrap_content"
@@ -71,12 +71,12 @@
             android:layout_marginTop="14.5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:background="@drawable/rect_with_boder"
             android:paddingLeft="14dp"
             android:paddingRight="14dp"
             android:paddingTop="13dp"
             android:paddingBottom="22.5dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/round_rect_with_grey_boder">
             
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -109,12 +109,12 @@
             android:layout_marginTop="14.5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:background="@drawable/rect_with_boder"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingTop="14.5dp"
             android:paddingBottom="14.5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/round_rect_with_grey_boder">
             
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -151,12 +151,12 @@
             android:layout_marginTop="14.5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:background="@drawable/rect_with_boder"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingTop="14.5dp"
             android:paddingBottom="14.5dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/round_rect_with_grey_boder">
             
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
