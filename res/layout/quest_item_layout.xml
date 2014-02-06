@@ -49,16 +49,14 @@
         android:textColor="#ffffff"
         android:textStyle="italic" />
 
-    <Button
+    <com.photowall.widget.TypefaceButton
         android:id="@+id/followbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dip"
-        android:background="@drawable/btn_follow"
-        android:text="FOLLOW"
-        android:textColor="@color/follow_color"
-        android:textStyle="bold" />
+        android:text="+ FOLLOW"
+        style="@style/red_white_button" />
 
 </RelativeLayout>

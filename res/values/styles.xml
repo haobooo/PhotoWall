@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     
     <style name="AppBaseTheme" parent="android:Theme">
     </style>
@@ -70,5 +70,12 @@
     <style name="CustomTitleTheme">
         <item name="android:windowTitleSize">46dp</item>  
      	<item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+    
+    <style name="red_white_button">
+        <item name="android:background">@drawable/btn_red_white</item>
+        <item name="android:textColor">@color/red_white_color</item>
+        <item name="android:gravity">center</item>
+        <item name="customTypeface">"fonts/TrajanPro-Bold.ttf"</item>
     </style>
 </resources>
