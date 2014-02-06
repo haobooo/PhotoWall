@@ -45,17 +45,28 @@
         android:layout_marginLeft="31dp"
         android:layout_marginRight="31dp"
         android:background="@drawable/login_email_btn"
-        android:text="SIGN UP"
+        android:text="LOGIN"
         android:textColor="@color/login_email_color"
         android:textSize="24sp"/>
 	
-    <ImageView
-        android:layout_width="wrap_content"
+    <RelativeLayout android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/login_background"
-        android:gravity="right"
-        android:scaleType="fitEnd" />
+        android:layout_weight="1">
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitEnd"
+            android:src="@drawable/login_background" />
+        
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="28dp"
+            android:src="@drawable/go_ahead_and_check_it_out"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
     
 </LinearLayout>
