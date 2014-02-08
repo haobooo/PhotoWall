@@ -15,7 +15,7 @@ public class PhotoPagerAdapter extends FragmentStatePagerAdapter {
 	
 	private ArrayList<Fragment> mFragments;
     private String[] titles = {
-            "◆ New","◆ Hot"
+            "● New","● Hot"
     };
 	
 	public PhotoPagerAdapter(FragmentManager fm) {
