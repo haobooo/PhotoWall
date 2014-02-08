@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,6 +22,7 @@ import com.photowall.bean.DataManagerTest;
 import com.photowall.photowallcommunity.R;
 import com.photowall.ui.quests.ProfileAdapter;
 import com.photowall.ui.quests.ProfileMasteryAdapter;
+import com.photowall.widget.ui.DialogUtils;
 
 public class PhotoProfileActivity extends Activity {
 
@@ -42,6 +45,7 @@ public class PhotoProfileActivity extends Activity {
 	
 	public void initViews()
 	{
+		final View titleView = findViewById(R.id.header);
 		mastry_grid = (GridView) findViewById(R.id.mastry_grid);
 		archieve_grid = (GridView) findViewById(R.id.archieve_grid);
 		challeng_grid = (GridView) findViewById(R.id.challeng_grid);
@@ -55,6 +59,15 @@ public class PhotoProfileActivity extends Activity {
 		list1.addAll(DataManagerTest.getArchiData());
 		ProfileAdapter adapter1 = new ProfileAdapter(list1, this);
 		archieve_grid.setAdapter(adapter1);
+		archieve_grid.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				DialogUtils.showArchievedDialog(PhotoProfileActivity.this, titleView);
+			}
+			
+		});
 		
 		ArrayList<Object> list2 = new ArrayList<Object>();
 		list2.addAll(DataManagerTest.getArchiData());

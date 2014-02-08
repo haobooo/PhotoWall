@@ -3,10 +3,12 @@ package com.photowall.widget.ui;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 
@@ -56,6 +58,29 @@ public class DialogUtils {
 		});
 		
 		
+		
+	}
+	
+	public static void showArchievedDialog(Context context, View anchor) {
+		View view = LayoutInflater.from(context).inflate(R.layout.archieved_dialog, null);
+		view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.MarginLayoutParams.FILL_PARENT,ViewGroup.MarginLayoutParams.FILL_PARENT));
+		view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+		
+		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+		int width = wm.getDefaultDisplay().getWidth();
+		
+		final PopupWindow popupWindow = new PopupWindow(view, width,view.getMeasuredHeight());
+		popupWindow.setOutsideTouchable(true);
+		popupWindow.showAsDropDown(anchor);
+		
+		view.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				popupWindow.dismiss();
+			}
+			
+		});
 		
 	}
 }
