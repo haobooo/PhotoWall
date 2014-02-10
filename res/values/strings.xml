@@ -249,4 +249,8 @@
     <string name="profile_achieved">ACHIEVED \n %1$d</string>
     <string name="profile_challenge">CHALLENGE \n %1$d</string>
     <string name="archieved_count">Archieved <b><font color='red'>3</font></b> times</string>
+    <string name="indicator_new">• NEW</string>
+    <string name="indicator_hot">• HOT</string>
+    <string name="indicator_challenging">• CHALLENGING</string>
+    <string name="indicator_archievement">• ARCHIEVEMENT</string>
 </resources>

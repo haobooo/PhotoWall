@@ -47,7 +47,7 @@ implements OnCenterItemClickListener, View.OnClickListener
 		
 		//Set the pager with an adapter
         ViewPager pager = (ViewPager)findViewById(R.id.viewpager);
-        ArchipaihangPhotoPagerAdapter adapter = new ArchipaihangPhotoPagerAdapter(getSupportFragmentManager());
+        ArchipaihangPhotoPagerAdapter adapter = new ArchipaihangPhotoPagerAdapter(getSupportFragmentManager(), getString(R.string.indicator_challenging), getString(R.string.indicator_archievement) );
         pager.setAdapter(adapter);
         
         //Bind the title indicator to the adapter

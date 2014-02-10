@@ -14,14 +14,18 @@ import android.util.Log;
 public class ArchipaihangPhotoPagerAdapter extends FragmentStatePagerAdapter {
 	
 	private ArrayList<Fragment> mFragments;
-    private String[] titles = {
-            "● Challenging","● Archievement"
-    };
+//    private String[] titles = {
+//            "● Challenging","● Archievement"
+//    };
+	private String[] titles = new String[2];
 	
-	public ArchipaihangPhotoPagerAdapter(FragmentManager fm) {
+	public ArchipaihangPhotoPagerAdapter(FragmentManager fm, String titleLeft, String titleRight) {
 		super(fm);
 		 mFragments = new ArrayList<Fragment>();
-       
+		 
+		 titles[0] = titleLeft;
+		 titles[1] = titleRight;
+			
        ChallengNewFragment newf = new ChallengNewFragment();
        Bundle bundle = new Bundle();
        bundle.putString("title", titles[0]);

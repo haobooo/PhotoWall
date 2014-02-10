@@ -47,7 +47,7 @@ implements OnCenterItemClickListener, View.OnClickListener
 		
 		//Set the pager with an adapter
         ViewPager pager = (ViewPager)findViewById(R.id.viewpager);
-        HotPostPhotoPagerAdapter adapter = new HotPostPhotoPagerAdapter(getSupportFragmentManager());
+        HotPostPhotoPagerAdapter adapter = new HotPostPhotoPagerAdapter(getSupportFragmentManager(), getString(R.string.indicator_new), getString(R.string.indicator_hot));
         pager.setAdapter(adapter);
         
         //Bind the title indicator to the adapter

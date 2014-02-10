@@ -18,13 +18,7 @@
 */
 -->
 <resources>
-    <dimen name="hint_y_offset">64dip</dimen>
-     <dimen name="slidingmenu_offset">60dp</dimen>
-    <dimen name="list_padding">10dp</dimen>
-    <dimen name="shadow_width">15dp</dimen>
-    <dimen name="title_indicator_height">30dp</dimen>
-    
-    <dimen name="menu_notification_text_size">16sp</dimen>
+    <dimen name="menu_notification_text_size">14sp</dimen>
     <dimen name="menu_title_text_size">16sp</dimen>
     <dimen name="menu_title_content_size">18sp</dimen>
 </resources>

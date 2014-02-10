@@ -12,6 +12,7 @@
         android:id="@+id/iv_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:layout_marginLeft="8dp"
         android:src="@drawable/menu_top_left_btn" />
 
@@ -40,12 +41,14 @@
         android:id="@+id/iv_creat"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:src="@drawable/menu_top_quest_btn" />
 
     <ImageView
         android:id="@+id/iv_set"
         android:layout_width="31.5dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:layout_gravity="center"
         android:src="@drawable/menu_top_right_btn" />
 

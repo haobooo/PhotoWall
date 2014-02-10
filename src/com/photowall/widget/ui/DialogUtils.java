@@ -68,8 +68,9 @@ public class DialogUtils {
 		
 		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 		int width = wm.getDefaultDisplay().getWidth();
+		int height = wm.getDefaultDisplay().getHeight();
 		
-		final PopupWindow popupWindow = new PopupWindow(view, width,view.getMeasuredHeight());
+		final PopupWindow popupWindow = new PopupWindow(view, width,height);
 		popupWindow.setOutsideTouchable(true);
 		popupWindow.showAsDropDown(anchor);
 		

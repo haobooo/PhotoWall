@@ -14,14 +14,18 @@ import android.util.Log;
 public class HotPostPhotoPagerAdapter extends FragmentStatePagerAdapter {
 	
 	private ArrayList<Fragment> mFragments;
-    private String[] titles = {
-            "● NEW","● HOT"
-    };
+//    private String[] titles = {
+//            "● NEW","● HOT"
+//    };
+	private String[] titles = new String[2];
 	
-	public HotPostPhotoPagerAdapter(FragmentManager fm) {
+	public HotPostPhotoPagerAdapter(FragmentManager fm, String titleLeft, String titleRight) {
 		super(fm);
 		 mFragments = new ArrayList<Fragment>();
        
+		titles[0] = titleLeft;
+		titles[1] = titleRight;
+	       
        PostNewFragment newf = new PostNewFragment();
        Bundle bundle = new Bundle();
        bundle.putString("title", titles[0]);
