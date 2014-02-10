@@ -25,6 +25,7 @@
     <dimen name="title_indicator_height">30dp</dimen>
     
     <dimen name="menu_notification_text_size">16sp</dimen>
+    <dimen name="menu_legend_text_size">16sp</dimen>
     <dimen name="menu_title_text_size">16sp</dimen>
     <dimen name="menu_title_content_size">18sp</dimen>
 </resources>
